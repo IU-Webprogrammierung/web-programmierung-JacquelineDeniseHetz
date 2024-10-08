@@ -68,3 +68,10 @@
     font-size: 22px;
     line-height: 1.5;
   }
+
+  .cursor.link {
+    background-color: var(--pink);
+    width: 90px !important;
+    height: 90px !important;
+    mix-blend-mode: difference !important;
+  }
