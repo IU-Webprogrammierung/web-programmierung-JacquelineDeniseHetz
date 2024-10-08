@@ -46,3 +46,15 @@ and (max-device-width : 1024px)
 and (min-resolution: 192dpi) { 
 
 }
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+	
+}
