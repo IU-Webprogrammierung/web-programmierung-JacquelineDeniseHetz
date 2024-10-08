@@ -1,0 +1,20 @@
+/* CSS Document Fonts*/
+
+@font-face {
+    font-family: 'Borisna';
+    src: url('/fonts/BorisnaRegular.woff2') format('woff2'),
+        url('/fonts/BorisnaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'LaoMN';
+    src: url('/fonts/LaoMN.woff2') format('woff2'),
+        url('/fonts/LaoMN.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
