@@ -52,16 +52,20 @@
   .cursor.viewone::after {
     content: "Lorem 1";
   }
+  
   .cursor.viewtwo::after {
     content: "Lorem 2";
   }
+
   .cursor.viewthree::after {
     content: "Lorem 3";
   }
+
   .cursor.viewfour::after {
     content: "Lorem 4";
     text-transform: initial;
   }
+
   .cursor.viewfive::after {
     content: "Lorem 5";
     text-transform: initial;
@@ -74,4 +78,13 @@
     width: 90px !important;
     height: 90px !important;
     mix-blend-mode: difference !important;
+  }
+
+  .cursor.link::after {
+    content: "" !important;
+  }
+
+  .cursor.mail {
+    background-color: var(--pink);
+    mix-blend-mode: initial;
   }
