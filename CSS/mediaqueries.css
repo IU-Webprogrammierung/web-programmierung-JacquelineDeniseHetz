@@ -12,3 +12,9 @@ and (max-device-width : 480px) {
 and (min-width : 321px) {
 
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+
+}
