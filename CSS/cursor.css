@@ -1,0 +1,23 @@
+/* CSS Document Cursor */
+
+/* Farbdefinierung */
+:root {
+    --pink: #ff5d8f;
+  }
+  /* Curserveränderung */
+  .cursor {
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    border: 6px solid var(--pink);
+    top: 0;
+    left: 0;
+    cursor: none;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    z-index: 998;
+    transition: width 0.3s ease, height 0.3s ease;
+    transform: translate(-50%, -50%);
+  }
