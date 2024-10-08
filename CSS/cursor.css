@@ -52,7 +52,7 @@
   .cursor.viewone::after {
     content: "Lorem 1";
   }
-  
+
   .cursor.viewtwo::after {
     content: "Lorem 2";
   }
@@ -87,4 +87,15 @@
   .cursor.mail {
     background-color: var(--pink);
     mix-blend-mode: initial;
+  }
+
+  .cursor.mail::after {
+    content: "contact" !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1;
   }
