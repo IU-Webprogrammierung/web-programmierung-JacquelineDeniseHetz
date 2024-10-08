@@ -66,3 +66,8 @@ only screen
 and (min-resolution: 192dpi) {
 
 }
+
+/* For non-retina based devices with a smaller screen */
+@media only screen and (min-width: 320px) {
+
+}
