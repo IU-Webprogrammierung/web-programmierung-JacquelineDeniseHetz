@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/* CSS Document */
+html,
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Borisna';
+  cursor: none;
+}
