@@ -64,29 +64,28 @@
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (4)">
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (5)">
         </paw-background>
-        <!-- Scroll Content Anfang -->
-		<div id="scroll-horizontal">
-            <div class="loadbar"></div>
-            <div id="horizontal" class="horizontal">
+
+        <!-- Horizontale Scroll-Section -->
+        <scroll-section id="scroll-horizontal">
+            <load-bar class="loadbar"></load-bar>
+            <scroll-content id="horizontal" class="horizontal">
                 <!-- Scroll Content Über mich Anfang -->
-                    <div class="items">
-                        <a href="/html/aboutme.html" class="flex">
-                            <div class="content">
-                                <div class="name-of-project">
-                                    <div class="projectname">Über</div>
-                                    <div class="projectname indent">Mich</div>
-                                </div>
-                                <div class="showonhover">
-                                <div class="overflow">
-                                    <div class="text">Grundlegendes</div>
-                                </div>
-                                </div>
-                            </div>
-                                <div class="image">
-                                <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
-                            </div>
-                        </a>
-                    </div>
+                <scroll-item class="items">
+                    <a href="/html/aboutme.html" class="flex">
+                        <project-info class="content">
+                            <project-title>
+                                <title-part>Über</title-part>
+                                <title-part class="indent">Mich</title-part>
+                            </project-title>
+                            <hover-info class="showonhover">
+                                <overflow><hover-text>Grundlegendes</hover-text></overflow>
+                            </hover-info>
+                        </project-info>
+                        <project-image>
+                            <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&size=l&direction=2&head_direction=2&gesture=sml&action=sit&headonly=false&66ed85941237f" alt="Avatar Image">
+                        </project-image>
+                    </a>
+                </scroll-item>
                 <!-- Scroll Content Über mich Ende -->
                 <!-- Scroll Content Hervorhebung#1 Anfang -->
                 <div class="items">
