@@ -1,0 +1,15 @@
+/* CSS Document */
+/* Hide scrollbar für Chrome, Safari und Opera */
+html::-webkit-scrollbar,
+#startpage::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar für IE, Edge und Firefox */
+html,
+#startpage {
+  -ms-overflow-style: none;
+  /* IE und Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
