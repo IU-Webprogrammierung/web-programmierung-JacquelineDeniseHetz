@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Nochmal zurückgesetzt auf meine div-Struktur-->
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="CSS/scrollbarhide.css">
     <link rel="stylesheet" href="CSS/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Platz für JavaScript Einbindung-->
     <script src="JavaScript/main.js"></script>
     <script src="JavaScript/mouse.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
     <script>
         // Preloader anzeigen und danach die Seite anzeigen
         window.addEventListener('load', function () {
@@ -41,158 +41,168 @@
                 document.querySelector('.centerimg').classList.add('start');
             }, 7050); // Preloader bleibt für 7 Sekunden sichtbar
         });
-</script>
+    </script>
 </head>
 <body id="body">
-    <!-- Preloader -->
-    <loading-screen id="loader" class="loading">
-        <static-text>I'm</static-text>
-        <loading-slider>
+    <!--Preloader Beginn-->
+    <div id="loader" class="loading">
+        <div class="static-text">I'm</div>
+        <div class="loading-slider">
             <span>a Student</span>
-            <span>media-addicted</span>
+            <span>media-adiccted</span>
             <span>creative</span>
             <span><span class="pink">HERE!</span></span>
             <span>Jacqueline Denise Hetz</span>
-        </loading-slider>
-    </loading-screen>
-
-    <!-- Schwarzer Overlay -->
-    <overlay class="blackoverlay"></overlay>
-
-    <main id="home_page" style="display: none;"></main>
-        <overlay class="new-overlay"></overlay>
-        <!--Curserveränderung-->
-        <cursor-effect class="cursor"></cursor-effect>
+        </div>
+    </div>
+    <!--Preloader Ende-->
+    <!--Schwarzer Overlay Anfang-->
+    <div class="blackoverlay"></div>
+    <!--Schwarzer Overlay Ende-->
+    <main id="home_page" style="display: none;">
+        <div class="new-overlay"></div>
+        <div class="cursor"></div>
         <header>
-            <!-- Verlinkungen -->
-            <nav class="container">
-                <nav-title>
+          <!--Verlinkungen Anfang-->
+            <div class="container">
+                <div class="title">
                     <span><a href="mailto:hetz.business@gmail.com">Mediadesign Student</a></span>
-                    <span><a href="mailto:hetz.business@gmail.com">available to work</a></span>
-                </nav-title>
-                <nav-links>
-                    <a href="html/aboutme.html">Über Mich</a>
-                    <a href="html/portfolio.html">Mein Portfolio</a>
+            		    <span><a href="mailto:hetz.business@gmail.com">available to work</a></span>
+                </div>
+                <div class="links">
+					          <a href="html/aboutme.html">Über Mich</a>
+            		    <a href="html/portfolio.html">Mein Portfolio</a>
                     <a href="https://www.linkedin.com/in/jacqueline-denise-hetz-25055b171/?originalSubdomain=de" target="_blank">Li</a>
                     <a href="https://dribbble.com/hetzdesign" target="_blank">Dr</a>
                     <a href="https://www.instagram.com/hetzdesign/" target="_blank">In</a>
-                </nav-links>
-            </nav>
+                </div>
+            </div>
+        	<!--Verlinkungen Ende-->
         </header>
-        <!-- Bilder und Animationen -->
-        <background-images>
-            <background-image class="firstimg"></background-image>
-            <background-image class="secondimg"></background-image>
-            <center-image>
-                <name-section>
-                    <overflow><firstname class="wrap">Jacqueline Denise</firstname></overflow>
-                    <overflow><surname class="wrap">Hetz</surname></overflow>
-                </name-section>
-                <img src="Medien/Bilder/Ich_1.jpg" class="change_img" alt="Bild von mir (1)">
-                <img src="Medien/Bilder/Ich_2.JPG" class="change_img" alt="Bild von mir (2)">
-            </center-image>
-        </background-images>
-        <!-- Pfoten-Illustrationen im Hintergrund -->
-        <paw-background>
+        <!--Bilder von mir & BG Animation Anfang-->
+        <div class="firstimg"></div>
+        <div class="secondimg"></div>
+        <div class="centerimg">
+            <div class="name">
+                <div class="overflow">
+                    <div class="firstname wrap">Jacqueline Denise</div>
+                </div>
+                <div class="overflow">
+                    <div class="surname wrap">Hetz</div>
+                </div>
+            </div>
+            <img src="Medien/Bilder/Ich_1.jpg" class="change_img" alt="Bild von mir (1)">
+            <img src="Medien/Bilder/Ich_2.JPG" class="change_img" alt="Bild von mir (2)">
+        </div>
+        <!--Bilder von mir & BG Animation-->
+		    <!--Background Paw Illustration Anfang-->
+        <div class="pawclass">
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (1)">
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (2)">
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (3)">
-            <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (4)">
+			      <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (4)">
             <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (5)">
-        </paw-background>
-
-        <!-- Horizontale Scroll-Section -->
-        <scroll-section id="scroll-horizontal">
-            <load-bar class="loadbar"></load-bar>
-            <scroll-content id="horizontal" class="horizontal">
-                <!-- Scroll Content Über mich Anfang -->
-                <scroll-item class="items">
-                    <a href="/html/aboutme.html" class="flex">
-                        <project-info class="content">
-                            <project-title>
-                                <title-part>Über</title-part>
-                                <title-part class="indent">Mich</title-part>
-                            </project-title>
-                            <hover-info class="showonhover">
-                                <overflow><hover-text>Grundlegendes</hover-text></overflow>
-                            </hover-info>
-                        </project-info>
-                        <project-image>
-                            <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&size=l&direction=2&head_direction=2&gesture=sml&action=sit&headonly=false&66ed85941237f" alt="Avatar Image">
-                        </project-image>
-                    </a>
-                </scroll-item>
-                <!-- Scroll Content Über mich Ende -->
-                <!-- Scroll Content Hervorhebung#1 Anfang -->
-                <scroll-item class="items">
-                    <a href="/html/coding.html" class="flex">
-                        <project-info class="content">
-                            <project-title>
-                                <title-part>Coding</title-part>
-                                <title-part class="indent">Portfolio</title-part>
-                            </project-title>
-                            <hover-info class="showonhover">
-                                <overflow><hover-text>Coding & More</hover-text></overflow>
-                            </hover-info>
-                        </project-info>
-                        <project-image>
-                            <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&size=l&direction=2&head_direction=2&gesture=sml&action=sit&headonly=false&66ed85941237f" alt="Avatar Image">
-                        </project-image>
-                    </a>
-                </scroll-item>
-                <!-- Scroll Content Hervorhebung#1 Ende -->
-                <!-- Scroll Content Hervorhebung#2 Anfang -->
-                <scroll-item class="items">
-                    <a href="/html/study.html" class="flex">
-                        <project-info class="content">
-                            <project-title>
-                                <title-part>Studien</title-part>
-                                <title-part class="indent">Portfolio</title-part>
-                            </project-title>
-                            <hover-info class="showonhover">
-                                <overflow><hover-text>Uniprojekte</hover-text></overflow>
-                            </hover-info>
-                        </project-info>
-                        <project-image>
-                            <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&size=l&direction=2&head_direction=2&gesture=sml&action=sit&headonly=false&66ed85941237f" alt="Avatar Image">
-                        </project-image>
-                    </a>
-                </scroll-item>
-                <!-- Scroll Content Hervorhebung#2 Ende -->
-            </scroll-content>
-        </scroll-section>
-        <!-- Scroll Content Ende -->
-    </main>
-    <!-- Footer -->
-    <footer>
-        <footer-container>
-            <footer-section>
-                <h2>Über mich</h2>
-                <p>Ich studiere Mediendesign im 6. Fachsemester</p>
-            </footer-section>
-            <footer-section>
-                <h2>Rechtliches</h2>
-                <ul>
-                    <li><a href="html/datenschutz.html">Datenschutz</a></li>
-                    <li><a href="html/impressum.html">Impressum</a></li>
-                </ul>
-            </footer-section>
-            <footer-section>
-                <h2>Follow Me</h2>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/jacqueline-denise-hetz-25055b171/?originalSubdomain=de" target="_blank">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a href="https://dribbble.com/hetzdesign" target="_blank">
-                        <i class="fab fa-dribbble fa-2x"></i>
-                    </a>
-                    <a href="https://www.instagram.com/hetzdesign/" target="_blank">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
+        </div>
+		    <!--Background Paw Illustration Ende-->
+		    <!-- Scroll Content Anfang -->
+        <div id="scroll-horizontal">
+          <div class="loadbar"></div>
+          <div id="horizontal" class="horizontal">
+            <!-- Scroll Content Über mich Anfang -->
+            <div class="items">
+                <a href="html/aboutme.html" class="flex">
+                <div class="content">
+                    <div class="name-of-project">
+                        <div class="projectname">Über</div>
+                        <div class="projectname indent">Mich</div>
+                    </div>
+                    <div class="showonhover">
+                      <div class="overflow">
+                        <div class="text">Grundlegendes</div>
+                      </div>
+                    </div>
                 </div>
-            </footer-section>
-        </footer-container>
-        <footer-bottom>&copy; 2024 Jacqueline Denise Hetz | All rights reserved.</footer-bottom>
-    </footer>
+                <div class="image">
+                  <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                </div>
+                </a>
+            </div>
+            <!-- Scroll Content Über mich Ende -->
+            <!-- Scroll Content Hervorhebung#1 Anfang -->
+            <div class="items">
+                <a href="html/coding.html" class="flex">
+                    <div class="content">
+                        <div class="name-of-project">
+                            <div class="projectname">Coding</div>
+                            <div class="projectname indent">Portfolio</div>
+                        </div>
+                        <div class="showonhover">
+                          <div class="overflow">
+                              <div class="text">Coding&amp;More</div>
+                          </div>
+                        </div>
+                    </div>
+                      <div class="image">
+                        <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                    </div>
+                </a>
+            </div>
+            <!-- Scroll Content Hervorhebung#1 Ende -->
+            <!-- Scroll Content Hervorhebung#2 Anfang -->
+            <div class="items">
+                <a href="html/study.html" class="flex">
+                    <div class="content">
+                        <div class="name-of-project">
+                            <div class="projectname">Studien</div>
+                            <div class="projectname indent">Portfolio</div>
+                        </div>
+                        <div class="showonhover">
+                          <div class="overflow">
+                              <div class="text">Uniprojekte</div>
+                          </div>
+                        </div>
+                    </div>
+                      <div class="image">
+                        <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                    </div>
+                </a>
+            </div>
+            <!-- Scroll Content Hervorhebung#2 Ende -->    
+          </div>
+        </div>
+      <!-- Scroll Content Ende -->
+    </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Über mich</h2>
+        <p>Ich studiere Mediendesign im 6. Fachsemester</p>
+      </div>
+      <div class="footer-section">
+        <h2>Rechtliches</h2>
+        <ul>
+          <li><a href="html/datenschutz.html">Datenschutz</a></li>
+          <li><a href="html/impressum.html">Impressum</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Me</h2>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/jacqueline-denise-hetz-25055b171/?originalSubdomain=de" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="https://dribbble.com/hetzdesign" target="_blank">
+            <i class="fab fa-dribbble fa-2x"></i>
+          </a>
+          <a href="https://www.instagram.com/hetzdesign/" target="_blank">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 Jacqueline Denise Hetz | All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>

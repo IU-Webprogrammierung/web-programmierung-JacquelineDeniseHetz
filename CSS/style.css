@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* CSS Document */
+/* CSS Document Startseite*/
 html,
 body,
 * {
@@ -9,135 +9,939 @@ body,
   cursor: none;
 }
 
+/* Farbdefinierung */
+:root {
+  --pink: #ff5d8f;
+}
+
+/* Overlaytausch*/
+.new-overlay {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: #000;
+  z-index: 999;
+  height: 0vh;
+  transition: 1s ease-in-out;
+}
+.new-overlay.start {
+  height: 100vh;
+}
+
+.second-overlay {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000;
+  z-index: 999;
+  height: 100vh;
+  transition: 1s ease-in-out;
+}
+.second-overlay.start {
+  height: 0vh;
+}
+
 /* BodyBG*/
 body {
-    background-color: #000;
-  }
-  body.fill {
-    background-color: var(--pink);
-  }
-  body.fill #home_page {
-    background-color: var(--pink);
-  }
-  body.fill #startpage {
-    background-color: var(--pink) !important;
-  }
-  body.fill .cursor {
-    background-color: var(--pink);
-  }
-  body.fill .firstname:before {
-    z-index: 1 !important;
-  }
-  body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
-  }
-  
-  body.fill header.nottransparent {
-    background-color: var(--pink) !important;
-  }
-  body.fill header .links a {
-    color: #000;
-  }
-  body.fill header .title {
-    color: #000;
-  }
-  /* Pfoten */
-  body.fill .paw:nth-child(1) {
-    animation: fade 0.3s ease 1s forwards;
-  }
-  body.fill .paw:nth-child(2) {
-    animation: fade 0.3s ease 1.5s forwards;
-  }
-  body.fill .paw:nth-child(3) {
-    animation: fade 0.3s ease 0.5s forwards;
-  }
-  body.fill .paw:nth-child(4) {
-    animation: fade 0.3s ease 2s forwards;
-  }
-  body.fill .paw:nth-child(5) {
-    animation: fade 0.3s ease 2.5s forwards;
-  }
-  body.fill header .title span a {
-    color: #000;
-  }
-  
-  .img-responsive {
-    width: 100%;
-  }
+  background-color: #000;
+}
+body.fill {
+  background-color: var(--pink);
+}
+body.fill #home_page {
+  background-color: var(--pink);
+}
+body.fill #startpage {
+  background-color: var(--pink) !important;
+}
+body.fill .cursor {
+  background-color: var(--pink);
+}
+body.fill .firstname:before {
+  z-index: 1 !important;
+}
+body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
+}
+
+body.fill header.nottransparent {
+  background-color: var(--pink) !important;
+}
+body.fill header .links a {
+  color: #000;
+}
+body.fill header .title {
+  color: #000;
+}
+/* Pfoten */
+body.fill .paw:nth-child(1) {
+  animation: fade 0.3s ease 1s forwards;
+}
+body.fill .paw:nth-child(2) {
+  animation: fade 0.3s ease 1.5s forwards;
+}
+body.fill .paw:nth-child(3) {
+  animation: fade 0.3s ease 0.5s forwards;
+}
+body.fill .paw:nth-child(4) {
+  animation: fade 0.3s ease 2s forwards;
+}
+body.fill .paw:nth-child(5) {
+  animation: fade 0.3s ease 2.5s forwards;
+}
+body.fill header .title span a {
+  color: #000;
+}
+
+.img-responsive {
+  width: 100%;
+}
 
 /* loading screen */
-  
-loading-screen {
-    opacity: 0;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 100px;
-    line-height: 1.3;
-    z-index: 1000;
-    transition: opacity 1s ease-in-out;
+#loader {
+  opacity: 0;
+  position: absolute;
+  transition: 1s ease-in-out;
+  font-size: 100px;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #loader {
+    font-size: 48px;
+  }
+}
+#loader .static-text {
+  z-index: 1;
+  width: 40%;
+  text-align: right;
+  padding-right: 15px;
+  transform: translateY(-150px);
+  margin-left: -5%;
+}
+#loader .loading-slider {
+  transition: 1s ease-in-out;
+  transform: translateY(-150px);
+}
+#loader.loading {
+  opacity: 1;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+}
+#loader.loading .loading-slider {
+  width: 60%;
+}
+#loader.loading span.pink {
+  color: var(--pink);
+}
+
+/* Overlay black */
+.blackoverlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+  transition: 1s ease-in-out;
+  transform: translateY(100%);
+  transform-origin: bottom;
+}
+.blackoverlay.appear {
+  transform: translateY(0%);
+  z-index: 1000;
+}
+
+/* Header Stuff mit Slideranimation und nav */
+header {
+  padding: 20px 0;
+  z-index: 3;
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: 0.3s ease;
+  background-color: transparent;
+}
+header.start .title,
+header.start .links {
+  transform: translateY(0);
+}
+header.nottransparent {
+  background-color: #000 !important;
+  transition: background-color 0.3s ease;
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+header .title {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  z-index: 9999;
+  height: 60px; 
+}
+
+header .title span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeText 12s infinite; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 36px;
+}
+
+header .title span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+header .title span:nth-child(2) {
+  animation-delay: 6s; 
+}
+
+header .title span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+/* Animation für das Ein- und Ausblenden */
+@keyframes fadeText {
+  0%, 50%, 100% {
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  20%, 45% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+header .links {
+  text-align: right;
+}
+
+header .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  margin-left: 20px;
+}
+
+header .links {
+  transform: translateY(40px);
+  transition: 1s ease;
+  width: auto;
+  text-align: right;
 }
 
 @media (max-width: 767px) {
-    loading-screen {
-        font-size: 48px;
-    }
-}
-
-static-text {
-    width: 40%;
-    text-align: right;
-    padding-right: 15px;
-    transform: translateY(-150px);
-    margin-left: -5%;
-    z-index: 1;
-}
-
-loading-slider {
-    width: 60%;
-    transform: translateY(-150px);
-    transition: transform 1s ease-in-out;
-}
-
-#loader.loading {
-    opacity: 1;
-}
-
-loading-slider span.pink {
-    color: var(--pink);
-}
- 
-/* Header und Nav*/
-
-header nav.container {
-    width: 90%;
-    margin: auto;
-    position: relative;
+  header .links {
     display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
+  }
 }
-nav-title {
-    width: 50%;
-    position: relative;
-    overflow: hidden;
+header .title,
+header .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  header .title,
+  header .links a {
+    font-size: 22px;
+  }
+}
+header .links a {
+  margin: 0 15px;
+}
+header .links a:hover {
+  color: var(--pink);
+}
+@media (max-width: 767px) {
+  header .links a {
+    margin: 0 8px;
+  }
+}
+
+.margin-top {
+  margin-top: 25%;
+}
+
+/* BG, BG Animation, Me und Title*/
+#home_page {
+  background-color: #000;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+
+#home_page .firstimg {
+  background-image: url("../Medien/Bilder/Pikachu_Animationm_kleinerskaliert.gif");
+  background-size: auto;
+  background-attachment: fixed;
+  width: 30%;
+  height: 22%;
+  opacity: 0;
+  left: 3%;
+  top: 25%;
+  position: absolute;
+}
+@media (max-width: 767px) {
+  #home_page .firstimg {
+    width: 42%;
+    top: 18%;
+    height: 11%;
+  }
+}
+#home_page .firstimg::before {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease;
+}
+#home_page .firstimg.start {
+  opacity: 1;
+}
+#home_page .firstimg.start::before {
+  transition-delay: 0.5s;
+  height: 0%;
+}
+#home_page .secondimg {
+  background-image: url("../Medien/Bilder/Pikachu_Animationm_kleinerskaliert.GIF");
+  background-size: auto;
+  background-attachment: fixed;
+  width: 30%;
+  height: 41%;
+  opacity: 0;
+  right: 3%;
+  top: 65%;
+  position: absolute;
+  background-position: bottom right;
+}
+@media (max-width: 767px) {
+  #home_page .secondimg {
+    width: 42%;
+    top: 35%;
+    height: 22%;
+  }
+}
+#home_page .secondimg::before {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease;
+}
+#home_page .secondimg.start {
+  opacity: 1;
+}
+#home_page .secondimg.start::before {
+  transition-delay: 0.5s;
+  height: 0%;
+}
+#home_page .centerimg {
+  height: 100%;
+  text-align: center;
+  padding-top: 2%;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  #home_page .centerimg {
+    padding-top: 20%;
+  }
+}
+#home_page .centerimg img {
+  width: 42%;
+  z-index: 1;
+  position: relative;
+  transition: transform 1s ease;
+  transform: translateY(1080px);
+}
+@media (max-width: 767px) {
+  #home_page .centerimg img {
+    width: 62%;
+  }
+}
+#home_page .centerimg.start img {
+  transform: translateY(0);
+}
+#home_page .centerimg .name {
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  transform: translateY(50%);
+  z-index: 2;
+  margin: auto;
+  position: relative;
+  width: 40%;
+}
+#home_page .centerimg .name .firstname {
+  font-size: 142px;
+  line-height: 1;
+  margin-right: -4px;
+  padding: 0 4px;
+  margin-top: -13px;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  #home_page .centerimg .name .firstname {
+    font-size: 42px;
+    margin-top: 0px;
+  }
+}
+#home_page .centerimg .name .firstname.start span {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+#home_page .centerimg .name .firstname::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Medien/Bilder/Pikachuface.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 65%;
+  z-index: 0;
+  top: -50%;
+  left: 0;
+}
+#home_page .centerimg .name .surname {
+  font-size: 78px;
+  line-height: 0.9;
+  margin-top: -13px;
+  background-color: transparent;
+}
+#home_page .centerimg .name .surname.start span {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+@media (max-width: 767px) {
+  #home_page .centerimg .name .surname {
+    font-size: 32px;
+    margin-top: 0;
+  }
+}
+#home_page .centerimg .name .overflow {
+  overflow: hidden;
+  display: table;
+  margin: auto;
+  background-color: transparent;
+}
+#home_page .centerimg .name .wrap span {
+  display: inline-block;
+  background-color: transparent;
+  transition: 1s ease;
+  opacity: 0;
+  transform: translateY(100px);
+}
+#home_page .centerimg .name .wrap span:nth-child(9) {
+  transition-delay: 0.1s;
+}
+#home_page .centerimg .name .wrap span:nth-child(8) {
+  transition-delay: 0.3s;
+}
+#home_page .centerimg .name .wrap span:nth-child(7) {
+  transition-delay: 0.5s;
+}
+#home_page .centerimg .name .wrap span:nth-child(6) {
+  transition-delay: 0.7s;
+}
+#home_page .centerimg .name .wrap span:nth-child(5) {
+  transition-delay: 0.9s;
+}
+#home_page .centerimg .name .wrap span:nth-child(4) {
+  transition-delay: 1.1s;
+}
+#home_page .centerimg .name .wrap span:nth-child(3) {
+  transition-delay: 1.3s;
+}
+#home_page .centerimg .name .wrap span:nth-child(2) {
+  transition-delay: 1.5s;
+}
+#home_page .centerimg .name .wrap span:nth-child(1) {
+  transition-delay: 1.7s;
+}
+#home_page .centerimg .change_img:nth-child(3) {
+  position: absolute !important;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+}
+#home_page .centerimg .change_img:nth-child(2):hover {
+  opacity: 0;
+}
+#home_page .centerimg .change_img:nth-child(2):hover + img {
+  opacity: 1;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#home_page .pawclass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  #home_page .pawclass {
+    display: none;
+  }
+}
+/* Pfotenpositionen */
+#home_page .pawclass .paw {
+  width: 120px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+#home_page .pawclass .paw:nth-child(1) {
+  left: 7%;
+  top: 70%;
+}
+#home_page .pawclass .paw:nth-child(2) {
+  left: 20%;
+  top: 75%;
+}
+#home_page .pawclass .paw:nth-child(3) {
+  left: 2%;
+  top: 94%;
+}
+#home_page .pawclass .paw:nth-child(4) {
+  right: 16%;
+  top: 30%;
+}
+#home_page .pawclass .paw:nth-child(5) {
+  right: 4%;
+  top: 28%;
+}
+/* Scrollbalken horizontal */
+#home_page .loadbar {
+  width: 5%;
+  height: 80px;
+  transform: translate(85px, 106px);
+  background-image: url("../Medien/Bilder/Pikachu_Animationm_kleinerskaliert.GIF");
+  background-size: auto;
+  background-attachment: fixed;
+  opacity: 1;
+  left: 5%;
+  top: 0;
+  position: absolute;
+  background-position: center left;
+  transition: 0.3s ease;
+}
+@media (max-width: 767px) {
+  #home_page .loadbar {
+    display: none;
+  }
+}
+#home_page .horizontal {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 12%;
+  padding-left: 12%;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal {
+    padding-left: 0;
+    padding-top: 25%;
+    display: block;
+  }
+}
+
+#home_page .horizontal .items {
+  position: relative;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .items {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .items:nth-child(1) .showonhover {
+    margin-top: 10%;
+  }
+}
+#home_page .horizontal .items:nth-child(2) {
+  z-index: 2;
+}
+#home_page .horizontal .items:nth-child(2) .top-margin {
+  margin-top: 20%;
+}
+#home_page .horizontal .items:nth-child(3) {
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .items:nth-child(3) {
+    margin-left: 0%;
+  }
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .items:nth-child(3) .content {
+    transform: translateX(0%);
+    margin-bottom: 15px;
+  }
+}
+#home_page .horizontal .items:nth-child(4) .showonhover {
+  margin-top: 20%;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .items:nth-child(4) .showonhover {
+    margin-top: 10%;
+  }
+}
+#home_page .horizontal .items:nth-child(4) .flex {
+  margin-left: 0;
+}
+#home_page .horizontal .items a {
+  text-decoration: none !important;
+}
+#home_page .horizontal .flex {
+  display: flex;
+  margin: 0 100px;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex {
+    margin: 80px 0px;
+    flex-direction: column;
+  }
+}
+#home_page .horizontal .flex.show .showonhover .text {
+  transform: translateY(0px) !important;
+}
+#home_page .horizontal .flex.show img {
+  filter: grayscale(0);
+}
+#home_page .horizontal .flex .content {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content {
+    padding-left: 15px;
+  }
+}
+#home_page .horizontal .flex .content.rightpadding {
+  padding-right: 40px;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content.rightpadding {
+    padding-right: 0%;
+  }
+}
+#home_page .horizontal .flex .content.style4 {
+  transform: translateX(100px);
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content.style4 {
+    transform: translateX(0px);
+  }
+}
+#home_page .horizontal .flex .content .projectname {
+  font-size: 120px;
+  line-height: 0.9;
+  color: #fff;
+  text-decoration: none;
+}
+#home_page .horizontal .flex .content .projectname.indent {
+  transform: translateX(18%);
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .projectname.indent {
+    transform: translateX(38%);
+  }
+}
+#home_page .horizontal .flex .content .projectname.align-right {
+  text-align: right;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .projectname.align-right {
     text-align: left;
-    z-index: 9999;
-    height: 60px; 
   }
-  nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 36px;
-    margin-left: 20px;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .projectname {
+    font-size: 42px;
   }
+}
+#home_page .horizontal .flex .content .detail {
+  font-family: LaoMN;
+  font-size: 26px;
+  margin-top: 35px;
+  color: #fff;
+}
+#home_page .horizontal .flex .content .casestudy {
+  font-size: 26px;
+  font-family: LaoMN;
+  margin-top: 15px;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .casestudy {
+    font-size: 18px;
+  }
+}
+#home_page .horizontal .flex .content .showonhover {
+  font-size: 26px;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .showonhover {
+    font-size: 18px;
+  }
+}
+#home_page .horizontal .flex .content .showonhover .overflow {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#home_page .horizontal .flex .content .showonhover .overflow > div {
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+#home_page .horizontal .flex .content .showonhover .text {
+  font-family: LaoMN;
+  transition: 1s ease;
+  line-height: 1.2;
+  transform: translateY(40px);
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .showonhover .text {
+    transform: translateY(0px);
+  }
+}
+#home_page .horizontal .flex .content .visit-web {
+  position: absolute;
+  bottom: 0;
+}
+#home_page .horizontal .flex .content .visit {
+  font-size: 30px;
+  bottom: 0;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex .content .visit {
+    font-size: 18px;
+  }
+}
+#home_page .horizontal .flex .content .visit a {
+  font-family: LaoMN;
+  text-decoration: none;
+  color: #fff;
+}
+#home_page .horizontal .flex .content .visit a:hover {
+  color: var(--orange);
+}
+#home_page .horizontal .flex img {
+  width: 380px;
+  filter: grayscale(1);
+  transition: 0.3s ease;
+  position: relative;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  #home_page .horizontal .flex img {
+    width: calc(100% - 30px);
+    margin-left: 15px;
+    filter: grayscale(0);
+  }
+}
+#home_page .slider {
+  padding: 80px 0;
+  margin-top: 7%;
+  padding-left: 10%;
+}
+#home_page .slider.first-active {
+  padding-left: 10%;
+}
+#home_page .slider.visible .slick-list {
+  transform: translateX(0%);
+}
+#home_page .slider .slick-arrow {
+  display: none !important;
+}
+#home_page .slider .slick-dots {
+  background-image: url("../Medien/Bilder/Pikachu_Animationm_kleinerskaliert.GIF");
+  background-attachment: fixed;
+  width: 4%;
+  height: 8%;
+  opacity: 1;
+  left: 5%;
+  top: 0;
+  position: absolute;
+  background-position: bottom right;
+  transition: 0.3s ease;
+}
+#home_page .slider .slick-dots li {
+  opacity: 0;
+}
+#home_page .slider .slick-dots li button {
+  background-color: transparent;
+}
+#home_page .slider .slick-track {
+  padding-top: 3%;
+  display: flex;
+  align-items: flex-end;
+}
+#home_page .slider .slick-list {
+  margin: 0 -100px;
+  transform: translateX(30%);
+  transition: transform 0.3s ease;
+}
+#home_page .slider .slick-slide {
+  margin: 0 100px;
+  transition: 0.3s ease;
+}
+#home_page .slider .slick-slide:focus {
+  outline: none;
+}
+#home_page .slider .slick-slide.opaque {
+  opacity: 0;
+}
+#home_page .slider .flex .flex {
+  display: flex;
+}
+#home_page .slider .flex .content {
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #home_page .slider .flex .content {
+    padding-left: 15px;
+  }
+}
+#home_page .slider .flex .content.rightpadding {
+  padding-right: 5%;
+}
+#home_page .slider .flex .content.style4 {
+  transform: translateX(100px);
+}
+#home_page .slider .flex .content .projectname {
+  font-size: 124px;
+  line-height: 0.9;
+  color: #fff;
+}
+#home_page .slider .flex .content .projectname.indent {
+  transform: translateX(22%);
+}
+#home_page .slider .flex .content .projectname.align-right {
+  text-align: right;
+}
+#home_page .slider .flex .content .detail {
+  font-family: LaoMN;
+  font-size: 30px;
+  margin-top: 35px;
+}
+
+#home_page .slider .flex img {
+  width: 380px;
+}
+#home_page .social_links {
+  height: 100vh;
+  position: relative;
+}
+#home_page .social_links .linked {
+  color: #fff;
+  text-align: center;
+  font-size: 100px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home_page .social_links .linked div {
+  margin: 25px 0 0 0px;
+  opacity: 0.5;
+  transition: 0.3s ease;
+  text-shadow: -1px 2px black;
+}
+#home_page .social_links .linked div.active {
+  opacity: 1;
+}
+
+#home_page #startpage {
+  position: absolute;
+  overflow: auto;
+  background-color: #000;
+  width: 6%;
+  height: 8%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: 0.3s ease;
+}
+#home_page #startpage::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  position: absolute;
+  transition: 0.3s ease;
+}
+#home_page #startpage.start {
+  animation: reveal 5s ease-in-out forwards;
+}
+#home_page #startpage.start::after {
+  transition-delay: 5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+#scroll-horizontal .items {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+#scroll-horizontal.slide .items {
+  transform: translateX(0%);
+}
