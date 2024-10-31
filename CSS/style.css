@@ -67,11 +67,6 @@ body {
     width: 100%;
   }
 
-/* Farbdefinierung */
-:root {
-    --pink: #ff5d8f;
-  }
-
 /* loading screen */
   
 loading-screen {
