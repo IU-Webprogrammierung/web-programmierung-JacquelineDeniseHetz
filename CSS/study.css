@@ -1,0 +1,688 @@
+/* CSS Document Study*/
+
+/* Grundlegende Reset-Styles */
+html, body, * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Borisna', sans-serif;
+    cursor: none;
+  }
+  /* Farben */
+  :root {
+    --pink: #ff5d8f;
+  }
+  
+  /* BodyBG*/
+  body {
+    background-color: #000;
+  }
+  body.fill {
+    background-color: var(--pink);
+  }
+  body.fill #home_page {
+    background-color: var(--pink);
+  }
+  body.fill #startpage {
+    background-color: var(--pink) !important;
+  }
+  body.fill .cursor {
+    background-color: var(--pink);
+  }
+  body.fill .firstname:before {
+    z-index: 1 !important;
+  }
+  body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
+  }
+  
+  body.fill header.nottransparent {
+    background-color: var(--pink) !important;
+  }
+  body.fill header .links a {
+    color: #000;
+  }
+  body.fill header .title {
+    color: #000;
+  }
+  
+  /* Header Stuff mit Slideranimation und nav */
+  header {
+    padding: 20px 0;
+    z-index: 5;
+    width: 100%;
+    position: fixed !important;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: 0.3s ease;
+    background-color: #000;
+  }
+  header.start .title,
+  header.start .links {
+    transform: translateY(0);
+  }
+  header.nottransparent {
+    background-color: #000 !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  header .container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  header .title{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    z-index: 9999;
+    height: 60px; 
+  }
+  
+  header .title span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeText 12s infinite; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 36px; 
+  }
+  
+  header .title span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  header .title span:nth-child(2) {
+    animation-delay: 6s; 
+  }
+  
+  header .title span a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+  }
+  
+  /* Animation für das Ein- und Ausblenden */
+  @keyframes fadeText {
+    0%, 50%, 100% {
+      opacity: 0;
+      transform: translateY(50px); 
+    }
+    20%, 45% {
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  
+  header .links {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+    z-index: 9999;
+    height: 60px;
+  }
+  
+  
+  @media (max-width: 767px) {
+    header .links {
+      display: flex;
+    }
+  }
+  header .title,
+  header .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+    line-height: 1.6;
+  }
+  @media (max-width: 767px) {
+    header .title,
+    header .links a {
+      font-size: 22px;
+    }
+  }
+  
+  header .links a {
+    margin: 0 15px;
+  }
+  
+  header .links a:hover {
+    color: var(--pink);
+  }
+  
+  header .links a.active {
+      color: var(--pink); 
+      font-weight: bold; 
+      border-bottom: 2px solid var(--pink); 
+  }
+  
+  @media (max-width: 767px) {
+    header .links a {
+      margin: 0 8px;
+    }
+  }
+  
+  
+  #home_page {
+    background-color: #000;
+    transition: 0.3s ease;
+    overflow: hidden;
+  }
+  
+  /* Überschriftenbereich */
+  .headline-section {
+    margin-top: 100px; 
+    padding: 250px 0;
+      z-index: 0;
+    background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .headline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .big-headline {
+   color: white;
+      font-size: 5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      text-align: center;
+  }
+  
+  .subheadline {
+    font-size: 1.5em;
+    color: #fff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  @media (max-width: 767px) {
+    .big-headline {
+      font-size: 2.5em;
+    }
+  
+    .subheadline {
+      font-size: 1.2em;
+    }
+  }
+  
+  /* Zurück-Button */
+  .container_button {
+      margin-top: 120px;
+      display: flex;
+      margin-left: 5%; 
+  }
+  
+  
+  .back-button a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: var(--pink); 
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .back-button a:hover {
+      background-color: #ff4d7b; 
+  }
+  
+  /* Seitencontent */
+  
+  
+  .contentcontainer {
+    width: 95%;
+    max-width: 1500px;
+    margin: 10px auto 50px auto;
+    padding: 50px 20px;
+  }
+  
+  .points {
+    z-index: 2;
+    position: relative;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .points .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  @media (max-width: 767px) {
+    .points .flex {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+  
+  .points .flex .num {
+    padding-left: 15px;
+    background-attachment: fixed;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
+    background-size: cover;
+  }
+  
+  .points .flex > div[data-scrollmagic-pin-spacer] {
+    padding-left: 0;
+    padding-bottom: 0 !important;
+  }
+  
+  .points .flex h2,
+  .points .flex .num {
+    font-size: 60px;
+    font-family: 'Borisna';
+    margin-top: 0;
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+  
+  .points .flex h2 p,
+  .points .flex .num p {
+    font-family: 'LaoMN';
+    font-weight: 100;
+  }
+  
+  .points .flex .num {
+    width: 90px;
+  }
+  
+  .points .flex .num.stick {
+    position: fixed;
+    top: 110px;
+  }
+  
+  .points .flex p {
+    font-size: 25px;
+    padding-left: 10px;
+      font-family: 'LaoMN';
+  }
+  
+  
+  .points .flex > div {
+    padding: 0 15px;
+    margin-top: 0 !important;
+  }
+  
+  
+  .points .first_point .flex {
+    width: 100%;
+  }
+  
+  .points .first_point .flex.six-four > div:nth-child(1) {
+    width: 100%;
+  }
+  
+  
+  .points .first_point .flex.six-four > div:nth-child(1) > div:nth-child(2) {
+    width: calc(100% - 90px);
+  }
+  
+  .points .first_point .flex.six-four > div:nth-child(2) {
+    width: 100%;
+  }
+  
+  .points .first_point.point_two {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0;
+  }
+  
+  .points .first_point.point_two .flex .flex {
+    width: 100%;
+  }
+  
+  .points .first_point.point_two .flex .flex > div:nth-child(1) {
+    width: 90px;
+  }
+  
+  .points .first_point.point_two .flex .flex > div:nth-child(2) {
+    width: calc(100% - 90px);
+  }
+  
+  .points .first_point .align-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .points .first_point .align-center p {
+    width: 55%;
+  }
+  
+  .points .first_point.only_point {
+    padding: 0px 0 0px 0;
+  }
+  
+  .points .first_point.only_point p {
+    padding-left: 0 !important;
+  }
+  
+  .points .first_point.only_point .flex .flex > div {
+    padding-left: 8px;
+  }
+  
+  
+  .slick-slider {
+    z-index: -1;
+  }
+  
+  .full-width {
+    width: 100% !important;
+  }
+  
+  .first_slider {
+      margin-top: 50px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+  
+  .first_slider::-webkit-scrollbar {
+    display: none;  
+  }
+  
+  .first_slider div {
+    flex: 0 0 auto;
+    width: 300px; 
+    margin-right: 20px; 
+  }
+  
+  .first_slider img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .verteilercontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+  }
+  
+  
+  .image-box {
+      margin: 15px;
+      text-align: center;
+      width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+  }
+  
+  .image-box:hover {
+      transform: scale(1.05);
+  }
+  
+  
+  .image-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  
+  .caption {
+      padding: 15px;
+      background-color: #fff;
+      font-size: 18px;
+      color: #333;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+  .image-box:hover .caption {
+      background-color: #ff5d8f;
+      color: #fff;
+  }
+  
+  .image-box a {
+      text-decoration: none;
+      color: inherit;
+  }
+  
+  
+  .video-section {
+      text-align: center;
+      margin: 100px auto;
+      max-width: 800px; 
+  }
+  
+  
+  .video-title {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 10px;
+      font-family: 'Borisna', sans-serif;
+  }
+  
+  
+  .video-description {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+      font-family: 'LaoMN', sans-serif;
+  }
+  
+  
+  .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; 
+      height: 0;
+      overflow: hidden;
+  }
+  
+  
+  .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+  
+  /* CSS für die Bilder und deren Layout */
+          .image-gallery {
+              margin-top: 50px;
+              display: flex;
+              flex-wrap: nowrap; 
+              gap: 20px;
+              justify-content: center;
+              overflow-x: auto;
+          }
+  
+  
+          .image-gallery img {
+              width: 500px;
+              height: auto;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+          }
+  
+          .image-gallery img:hover {
+              transform: scale(1.05);
+          }
+  
+          .caption {
+              text-align: center;
+              font-size: 16px;
+              color: #555;
+              margin-top: 10px;
+          }
+  
+          .gallery-heading {
+              text-align: center;
+              margin-top: 100px;
+              font-size: 2.5em;
+              color: #333;
+              margin-bottom: 30px;
+              text-transform: uppercase;
+              font-family: 'Borisna', sans-serif;
+          }
+  
+          .gallery-description {
+              text-align: center;
+              font-size: 1.2em;
+              color: #666;
+              margin-bottom: 30px;
+              max-width: 800px;
+              margin-left: auto;
+              margin-right: auto;
+              font-family: 'LaoMN', sans-serif;
+              
+          }
+  
+  .redirect-button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh; 
+  }
+  
+  .redirect-button {
+      background-color: #ff5d8f;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+  
+  .redirect-button:hover {
+      background-color: #ff4d7b;
+  }
+  
+  .pdf-container {
+      background-color: transparent;
+      padding: 20px;
+      position: center;
+      margin-top: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      max-height: auto;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  .pdf-title {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #333;
+  }
+
+  .pdf-description {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+      font-family: 'LaoMN', sans-serif;
+  }
+  
+  .pdf-viewer {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+  }
+  
+  .button-container {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .titlebutton {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+  }
+  
+  .button-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px;
+  }
+  
+  /* Buttons */
+  .figma-button {
+      padding: 15px 20px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #ff5d8f;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      display: block;
+  }
+  
+  .figma-button:hover {
+      background-color: #ff2d6f;
+  }
+  
+  /* Responsive für mobile Geräte */
+  @media (max-width: 767px) {
+      .button-grid {
+          grid-template-columns: 1fr; 
+      }
+  }
