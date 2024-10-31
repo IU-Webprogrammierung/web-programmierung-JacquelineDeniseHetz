@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+/* Grundlegende Reset-Styles */
+html, body, * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Borisna', sans-serif;
+  cursor: none;
+}
+
+/* Farben */
+:root {
+  --pink: #ff5d8f;
+}
+
+/* Body Styles */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* BodyBG*/
+body {
+  background-color: #000;
+}
+body.fill {
+  background-color: var(--pink);
+}
+body.fill #home_page {
+  background-color: var(--pink);
+}
+body.fill #startpage {
+  background-color: var(--pink) !important;
+}
+body.fill .cursor {
+  background-color: var(--pink);
+}
+body.fill .firstname:before {
+  z-index: 1 !important;
+}
+body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
+}
+
+body.fill header.nottransparent {
+  background-color: var(--pink) !important;
+}
+body.fill header .links a {
+  color: #000;
+}
+body.fill header .title {
+  color: #000;
+}
+/* Pfoten */
+body.fill .paw:nth-child(1) {
+  animation: fade 0.3s ease 1s forwards;
+}
+body.fill .paw:nth-child(2) {
+  animation: fade 0.3s ease 1.5s forwards;
+}
+body.fill .paw:nth-child(3) {
+  animation: fade 0.3s ease 0.5s forwards;
+}
+body.fill .paw:nth-child(4) {
+  animation: fade 0.3s ease 2s forwards;
+}
+body.fill .paw:nth-child(5) {
+  animation: fade 0.3s ease 2.5s forwards;
+}
+body.fill header .title span a {
+  color: #000;
+}
+
+/* Header Stuff mit Slideranimation und nav */
+header {
+  padding: 20px 0;
+  z-index: 3;
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: 0.3s ease;
+  background-color: transparent;
+}
+header.start .title,
+header.start .links {
+  transform: translateY(0);
+}
+header.nottransparent {
+  background-color: #000 !important;
+  transition: background-color 0.3s ease;
+}
+
+
+header .container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+header .title{
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  z-index: 9999;
+  height: 60px; 
+}
+
+header .title span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeText 12s infinite; 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 36px; 
+}
+
+header .title span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+header .title span:nth-child(2) {
+  animation-delay: 6s; 
+}
+
+header .title span a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+/* Animation für das Ein- und Ausblenden */
+@keyframes fadeText {
+  0%, 50%, 100% {
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  20%, 45% {
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+
+header .links {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  text-align: right;
+  z-index: 9999;
+  height: 60px; 
+}
+
+
+@media (max-width: 767px) {
+  header .links {
+    display: flex;
+  }
+}
+header .title,
+header .links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  header .title,
+  header .links a {
+    font-size: 22px;
+  }
+}
+
+header .links a {
+  margin: 0 15px;
+}
+
+header .links a:hover {
+  color: var(--pink);
+}
+@media (max-width: 767px) {
+  header .links a {
+    margin: 0 8px;
+  }
+}
+
+.margin-top {
+  margin-top: 25%;
+}
+
+/* Styles für den Zurück-Button */
+.container_button {
+    margin-top: 120px;
+    display: flex;
+    margin-left: 5%; 
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--pink); 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #ff4d7b; 
+}
+/* BG, BG Animation, Me und Title*/
+#home_page {
+  background-color: #000;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+
+/* Impressum-Inhalt */
+.contentcontainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 50px auto;
+  padding: 50px 20px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contentcontainer h1, 
+.contentcontainer h2, 
+.contentcontainer h3 {
+  color: var(--pink);
+}
+
+.contentcontainer h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contentcontainer h2 {
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.contentcontainer h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contentcontainer p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contentcontainer .contact div {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contentcontainer .contact a {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contentcontainer .contact a:hover {
+  text-decoration: underline;
+}
