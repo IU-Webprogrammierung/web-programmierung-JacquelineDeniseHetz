@@ -381,30 +381,39 @@ html, body, * {
   .full-width {
     width: 100% !important;
   }
-  
-  .first_slider {
-      margin-top: 50px;
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    white-space: nowrap;
-    -ms-overflow-style: none;  /* Versteckt Scrollbalken in IE und Edge */
-    scrollbar-width: none;  /* Versteckt Scrollbalken in Firefox */
+ /* Slideranimation */ 
+ .first_slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%; 
+  max-width: 100%; 
+  margin-top: 5%;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+}
+
+.slider-track {
+  display: flex;
+  white-space: nowrap;
+  animation: slide 15s linear infinite;
+}
+
+.slider-track img {
+  width: auto;
+  height: 300px; 
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0);
   }
-  
-  .first_slider::-webkit-scrollbar {
-    display: none;  /* Versteckt Scrollbalken in Chrome, Safari und Opera */
+  100% {
+      transform: translateX(-100%);
   }
-  
-  .first_slider div {
-    flex: 0 0 auto;
-    width: 300px; 
-    margin-right: 20px; 
-  }
-  
-  .first_slider img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+}
 

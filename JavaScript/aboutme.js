@@ -1,8 +1,5 @@
 $(document).ready(function () {
-    // Overlay beim Start
-    $('.second-overlay').addClass('start');
-    window.scrollTo(0, 0);
-
+    
     // ScrollMagic Controller
     var usableController = new ScrollMagic.Controller();
     var winH = $(window).outerHeight();
@@ -32,27 +29,6 @@ $(document).ready(function () {
         }
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.first_slider');
-
-  let scrollSpeed = 4; 
-
-  function autoScroll() {
-    
-    slider.scrollLeft += scrollSpeed;
-
-    
-    if (slider.scrollLeft >= slider.scrollWidth / 2) {
-      slider.scrollLeft = 0;
-    }
-
-    requestAnimationFrame(autoScroll);
-  }
-
-  slider.innerHTML += slider.innerHTML;
-
-  autoScroll();
-});
 
   $('.horizontal .items .flex').hover(
     function () {
@@ -69,3 +45,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function () { $('.cursor').addClass('link'); },
     function () { $('.cursor').removeClass('link'); }
   );
+
+  window.addEventListener('load', () => {
+    const track = document.querySelector('.slider-track');
+    const clone = track.innerHTML;
+    track.innerHTML += clone; 
+
+    let offset = 0;
+    const speed = 2; // Geschwindigkeit 
+
+    function animateSlider() {
+        offset -= speed;
+        if (Math.abs(offset) >= track.scrollWidth / 2) {
+            offset = 0; 
+        }
+        track.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(animateSlider);
+    }
+
+    animateSlider();
+});
