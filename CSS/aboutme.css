@@ -370,7 +370,10 @@ html, body, * {
     padding-left: 8px;
   }
   
-  
+  .points .contentcontainer .first_point.point_one .flex.six-four .flex p {
+    margin-top: 2%;
+  }
+
   .slick-slider {
     z-index: -1;
   }
