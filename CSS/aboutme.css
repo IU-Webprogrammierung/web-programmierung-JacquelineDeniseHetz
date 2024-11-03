@@ -224,28 +224,7 @@ html, body, * {
     }
   }
   
-  /* Zurück-Button */
-  .container_button {
-      margin-top: 120px;
-      display: flex;
-      margin-left: 5%; 
-  }
   
-  
-  .back-button a {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 18px;
-      color: #fff;
-      background-color: var(--pink); 
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-  }
-  
-  .back-button a:hover {
-      background-color: #ff4d7b; 
-  }
   
   /* Seitencontent */
   
