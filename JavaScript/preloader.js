@@ -13,5 +13,5 @@ window.addEventListener('load', function () {
         document.querySelector('.secondimg').classList.add('start');
         document.querySelector('header').classList.add('start');
         document.querySelector('.centerimg').classList.add('start');
-    }, 7050); // Preloader bleibt für 7 Sekunden sichtbar
+    }, 16000); // Preloader bleibt für 7 Sekunden sichtbar
 });
