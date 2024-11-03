@@ -1,143 +1,155 @@
 <!DOCTYPE html> <!-- Nochmal zurückgesetzt auf meine div-Struktur-->
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacqui's Portfolio</title>
-    <!-- Platz für CSS Einbindung-->
-    <link rel="stylesheet" href="CSS/slick-theme.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/mediaqueries.css">
-    <link rel="stylesheet" href="CSS/fonts.css">
-    <link rel="stylesheet" href="CSS/cursor.css">
-    <link rel="stylesheet" href="CSS/footer.css">
-    <link rel="stylesheet" href="CSS/scrollbarhide.css">
-    <link rel="stylesheet" href="CSS/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Platz für JavaScript Einbindung-->
-    <script src="JavaScript/loadPreloader.js"></script>
-    <script src="JavaScript/header.js"></script>
-    <script src="JavaScript/main.js"></script>
-    <script src="JavaScript/mouse.js"></script>
-    <script src="JavaScript/preloader.js"></script>
-    <script src="JavaScript/footer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" crossorigin="anonymous"></script>
-</head>
-<!--Preloader Beginn--> <!--Versuch den Preloader auszulagern-->
-<section id="preloader-placeholder"></section>
-<!--Preloader Ende--> <!--Versuch den Preloader auszulagern-->
-<!--Ausgelargerter Header Anfang-->
-<header>
-  <section id="header-placeholder"></section> 
-</header>
-<body id="body">
-  <!--Schwarzer Overlay Anfang-->
-  <section class="blackoverlay"></section>
-  <!--Schwarzer Overlay Ende-->
-  <main id="home_page" style="display: none;">
-        <div class="new-overlay"></div>
-        <div class="cursor"></div>
-        
-        <!--Bilder von mir & BG Animation Anfang-->
-        <div class="firstimg"></div>
-        <div class="secondimg"></div>
-        <div class="centerimg">
-            <div class="name">
-                <div class="overflow">
-                    <div class="firstname wrap">Jacqueline Denise</div>
-                </div>
-                <div class="overflow">
-                    <div class="surname wrap">Hetz</div>
-                </div>
-            </div>
-            <img src="Medien/Bilder/Ich_1.jpg" class="change_img" alt="Bild von mir (1)">
-            <img src="Medien/Bilder/Ich_2.JPG" class="change_img" alt="Bild von mir (2)">
-        </div>
-        <!--Bilder von mir & BG Animation-->
-		    <!--Background Paw Illustration Anfang-->
-        <section class="pawclass">
-            <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (1)">
-            <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (2)">
-            <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (3)">
-			      <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (4)">
-            <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (5)">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Jacqui's Portfolio</title>
+      <!-- Platz für CSS Einbindung-->
+      <link rel="stylesheet" href="CSS/slick-theme.css">
+      <link rel="stylesheet" href="CSS/style.css">
+      <link rel="stylesheet" href="CSS/mediaqueries.css">
+      <link rel="stylesheet" href="CSS/fonts.css">
+      <link rel="stylesheet" href="CSS/cursor.css">
+      <link rel="stylesheet" href="CSS/footer.css">
+      <link rel="stylesheet" href="CSS/scrollbarhide.css">
+      <link rel="stylesheet" href="CSS/slick.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!-- Platz für JavaScript Einbindung-->
+      <script src="JavaScript/loadPreloader.js"></script>
+      <script src="JavaScript/main.js"></script>
+      <script src="JavaScript/mouse.js"></script>
+      <script src="JavaScript/preloader.js"></script>
+      <script src="JavaScript/footer.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" crossorigin="anonymous"></script>
+  </head>
+  <!--Preloader Beginn--> <!--Versuch den Preloader auszulagern-->
+  <section id="preloader-placeholder"></section>
+  <!--Preloader Ende--> <!--Versuch den Preloader auszulagern-->
+  <!--Ausgelargerter Header Anfang-->
+  <header>
+    <!--Verlinkungen Anfang-->
+    <nav class="container">
+      <section class="title">
+          <span><a href="mailto:hetz.business@gmail.com">Mediadesign Student</a></span>
+          <span><a href="mailto:hetz.business@gmail.com">available to work</a></span>
+      </section>
+      <section class="links">
+          <a href="html/aboutme.html">Über Mich</a>
+          <a href="html/portfolio.html">Mein Portfolio</a>
+          <a href="https://www.linkedin.com/in/jacqueline-denise-hetz-25055b171/?originalSubdomain=de" target="_blank">Li</a>
+          <a href="https://dribbble.com/hetzdesign" target="_blank">Dr</a>
+          <a href="https://www.instagram.com/hetzdesign/" target="_blank">In</a>
+      </section>
+    </nav>
+    <!--Verlinkungen Ende-->
+  </header>
+  <body id="body">
+    <!--Schwarzer Overlay Anfang-->
+    <section class="blackoverlay"></section>
+    <!--Schwarzer Overlay Ende-->
+    <main id="home_page" style="display: none;">
+      <section class="new-overlay"></section>
+      <section class="cursor"></section>
+      <!--Bilder von mir & BG Animation Anfang-->
+      <section class="firstimg"></section>
+      <section class="secondimg"></section>
+      <section class="centerimg">
+        <section class="name">
+          <section class="overflow">
+            <section class="firstname wrap">Jacqueline Denise</section>
+          </section>
+          <section class="overflow">
+            <section class="surname wrap">Hetz</section>
+          </section>
         </section>
-		    <!--Background Paw Illustration Ende-->
-		    <!-- Scroll Content Anfang -->
-        <div id="scroll-horizontal">
-          <div class="loadbar"></div>
-          <div id="horizontal" class="horizontal">
+        <img src="Medien/Bilder/Ich_1.jpg" class="change_img" alt="Bild von mir (1)">
+        <img src="Medien/Bilder/Ich_2.JPG" class="change_img" alt="Bild von mir (2)">
+      </section>
+      <!--Bilder von mir & BG Animation-->
+      <!--Background Paw Illustration Anfang-->
+      <section class="pawclass">
+        <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (1)">
+        <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (2)">
+        <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (3)">
+        <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (4)">
+        <img src="Medien/Bilder/pfote.svg" class="paw" alt="Pfote (5)">
+      </section>
+      <!--Background Paw Illustration Ende-->
+      <!-- Scroll Content Anfang -->
+        <section id="scroll-horizontal">
+          <section class="loadbar"></section>
+          <section id="horizontal" class="horizontal">
             <!-- Scroll Content Über mich Anfang -->
-            <div class="items">
+            <section class="items">
                 <a href="html/aboutme.html" class="flex">
-                <div class="content">
-                    <div class="name-of-project">
-                        <div class="projectname">Über</div>
-                        <div class="projectname indent">Mich</div>
-                    </div>
-                    <div class="showonhover">
-                      <div class="overflow">
-                        <div class="text">Grundlegendes</div>
+                  <section class="content">
+                      <section class="name-of-project">
+                          <section class="projectname">Über</section>
+                          <section class="projectname indent">Mich</section>
+                      </section>
+                      <div class="showonhover">
+                        <div class="overflow">
+                          <div class="text">Grundlegendes</div>
+                        </div>
                       </div>
-                    </div>
-                </div>
-                <div class="image">
-                  <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
-                </div>
+                  </section>
+                  <section class="image">
+                    <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                  </section>
                 </a>
-            </div>
+            </section>
             <!-- Scroll Content Über mich Ende -->
             <!-- Scroll Content Hervorhebung#1 Anfang -->
-            <div class="items">
-                <a href="html/coding.html" class="flex">
-                    <div class="content">
-                        <div class="name-of-project">
-                            <div class="projectname">Coding</div>
-                            <div class="projectname indent">Portfolio</div>
-                        </div>
-                        <div class="showonhover">
-                          <div class="overflow">
-                              <div class="text">Coding&amp;More</div>
-                          </div>
-                        </div>
+            <section class="items">
+              <a href="html/coding.html" class="flex">
+                <section class="content">
+                    <section class="name-of-project">
+                        <section class="projectname">Coding</section>
+                        <section class="projectname indent">Portfolio</section>
+                    </section>
+                    <div class="showonhover">
+                      <div class="overflow">
+                        <div class="text">Coding&amp;More</div>
+                      </div>
                     </div>
-                      <div class="image">
-                        <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
-                    </div>
-                </a>
-            </div>
+                </section>
+                <section class="image">
+                  <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                </section>
+              </a>
+            </section>
             <!-- Scroll Content Hervorhebung#1 Ende -->
             <!-- Scroll Content Hervorhebung#2 Anfang -->
-            <div class="items">
-                <a href="html/study.html" class="flex">
-                    <div class="content">
-                        <div class="name-of-project">
-                            <div class="projectname">Studien</div>
-                            <div class="projectname indent">Portfolio</div>
-                        </div>
-                        <div class="showonhover">
-                          <div class="overflow">
-                              <div class="text">Uniprojekte</div>
-                          </div>
-                        </div>
+            <section class="items">
+              <a href="html/study.html" class="flex">
+                <section class="content">
+                    <section class="name-of-project">
+                        <section class="projectname">Studien</section>
+                        <section class="projectname indent">Portfolio</section>
+                    </section>
+                    <div class="showonhover">
+                      <div class="overflow">
+                        <div class="text">Uniprojekte</div>
+                      </div>
                     </div>
-                      <div class="image">
-                        <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
-                    </div>
-                </a>
-            </div>
-            <!-- Scroll Content Hervorhebung#2 Ende -->    
-          </div>
-        </div>
+                </section>
+                <section class="image">
+                  <img src="https://www.habbo.de/habbo-imaging/avatarimage?user=xBlitzii14x&amp;size=l&amp;direction=2&amp;head_direction=2&amp;gesture=sml&amp;action=sit&amp;headonly=false&amp;66ed85941237f" alt="Avatar Image">
+                </section>
+              </a>
+            </section>
+            <!-- Scroll Content Hervorhebung#2 Ende -->
+          </section>
+        </section>
       <!-- Scroll Content Ende -->
-    </main>
-    <!-- Footer-Einbindung -->
-    <div id="footer-placeholder"></div>
-</body>   
+    </main>    
+  </body>
+  <!-- Footer-Einbindung -->
+  <div id="footer-placeholder"></div>   
 </html>
