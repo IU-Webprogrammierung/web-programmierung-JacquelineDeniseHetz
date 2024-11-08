@@ -1,0 +1,72 @@
+/* CSS-Dokument Responsiv Nav */
+
+.title a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.links .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.links .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.links .menu__icon {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+
+    header .title span a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+      }
+    
+    .links .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 60%;
+        max-width: 250px;
+        background-color: #00000090;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 1rem;
+        transition: right 0.8s ease;
+    }
+
+    .links .menu__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .links .menu.active {
+        right: 0;
+    }
+
+    .links .menu a {
+        color: white;
+        padding: 0.5rem 0;
+        text-decoration: none;
+    }
+
+    .links .menu a:hover {
+        color: --pink;
+    }
+}
+
+
