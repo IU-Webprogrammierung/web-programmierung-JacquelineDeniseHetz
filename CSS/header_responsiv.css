@@ -20,6 +20,9 @@
     display: none;
 }
 
+.title .kontakt__icon {
+    display: none;
+}
 
 @media (max-width: 767px) {
 
@@ -65,8 +68,29 @@
     }
 
     .links .menu a:hover {
-        color: --pink;
+        color: pink;
     }
+
+    .title .kontakt__icon {
+        display: inline-block; 
+        background: white;
+        border: 3px solid;
+        border-radius: 5px;
+        color: #ff5d8f;
+        font-size: 1.8rem;
+        cursor: pointer;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .title .kontakt__icon:hover {
+        color: #ffafcc;
+      }
+
+    header .title span a {
+        display: none;
+      }
 }
 
 
