@@ -96,23 +96,12 @@ header {
     height: 60px;
   }
   
-  @media (max-width: 767px) {
-    header .links {
-      display: flex;
-    }
-  }
   header .title,
   header .links a {
     color: #fff;
     text-decoration: none;
     font-size: 36px;
     line-height: 1.6;
-  }
-  @media (max-width: 767px) {
-    header .title,
-    header .links a {
-      font-size: 22px;
-    }
   }
   
   header .links a {
@@ -127,11 +116,5 @@ header {
       color: var(--pink); 
       font-weight: bold; 
       border-bottom: 2px solid var(--pink); 
-  }
-  
-  @media (max-width: 767px) {
-    header .links a {
-      margin: 0 8px;
-    }
   }
   

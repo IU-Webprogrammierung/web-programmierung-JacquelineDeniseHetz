@@ -1,7 +1,7 @@
 /* CSS-Dokument Header mit Responsivität*/
 
 .title a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     margin-right: 1rem;
 }
@@ -12,7 +12,7 @@
 }
 
 .links .menu a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -24,7 +24,117 @@
     display: none;
 }
 
-@media (max-width: 767px) {
+/* Smartphone */
+
+@media (min-width : 320px) 
+    and (max-width : 480px) {
+
+    header .title span a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+      }
+    
+    header .links {
+        position: relative;
+      }
+
+    .links .menu {
+        position: fixed;
+        z-index: 999; 
+        right: -100%;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        background-color: var(--black);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        transition: right 0.8s ease;
+    }
+
+    .links .menu__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .links .menu.active {
+        right: 0;
+    }
+
+    .links .menu a {
+        color: var(--pink);
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.1rem;
+        border-bottom:10px;
+        align-self: center;
+    }
+
+    .links .menu a:hover {
+        color: var(--lightpink);
+    }
+
+    .title .kontakt__icon {
+        display: inline-block; 
+        background: var(--white);
+        border: 3px solid;
+        border-radius: 5px;
+        color: var(--pink);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+    .title {
+        align-content: center;
+    }
+
+    header .title .kontakt__icon:hover {
+        color: var(--lightpink);
+      }
+
+    header .title span a {
+        display: none;
+      }
+    
+    .links .menu a:nth-child(1) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .links .menu a:nth-child(2) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .links .menu a:nth-child(3) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .links .menu a:nth-child(4) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .links .menu a:nth-child(5) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+
+}
+
+/* Tablet */
+
+@media (min-width : 768px) 
+and (max-width : 1024px) {
 
     header .title span a {
         color: #fff;
@@ -48,7 +158,7 @@
     }
 
     .links .menu__icon {
-        display: inline-block; 
+        display:inline-block; 
         background: none;
         border: none;
         color: white;
@@ -80,8 +190,6 @@
         font-size: 1.8rem;
         cursor: pointer;
         margin-left: auto;
-        justify-content: center;
-        align-items: center;
     }
 
     header .title .kontakt__icon:hover {
@@ -92,5 +200,4 @@
         display: none;
       }
 }
-
 
