@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(event) {
         if (!menuDropdown.contains(event.target) && !menuIcon.contains(event.target)) {
             menuDropdown.classList.remove('active');
-            menuIcon.textContent = '☰'; // Icon zurücksetzen, wenn Menü geschlossen wird
+            menuIcon.textContent = '☰'; // Icon zurücksetzen
         }
     });
 });

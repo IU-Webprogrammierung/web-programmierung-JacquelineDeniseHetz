@@ -105,7 +105,7 @@ header {
   }
   
   header .links a {
-    margin: 0 15px;
+    margin: auto;
   }
   
   header .links a:hover {
@@ -113,8 +113,11 @@ header {
   }
   
   header .links a.active {
-      color: var(--pink); 
+      color: var(--white); 
       font-weight: bold; 
-      border-bottom: 2px solid var(--pink); 
+      background-color: var(--lightpink);
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 5px;
   }
   
