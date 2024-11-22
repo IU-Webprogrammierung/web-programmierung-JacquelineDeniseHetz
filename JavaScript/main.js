@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       $('#loader').remove();
       $('.blackoverlay').remove();
-      $('.firstimg, .secondimg, header').addClass('start');
+      $('.firstimg, .secondimg,').addClass('start');
       setTimeout(function () {
         $('.centerimg').addClass('start');
         $('.title').slick('slickSetOption', 'autoplay', true, true);
