@@ -112,7 +112,8 @@
     .links .menu a:nth-child(2),
     .links .menu a:nth-child(3),
     .links .menu a:nth-child(4),
-    .links .menu a:nth-child(5) {
+    .links .menu a:nth-child(5),
+    .links .menu a:nth-child(6) {
         background-color: var(--white);
         width: 100%; 
         text-align: center;
@@ -121,7 +122,8 @@
     .links .menu a:nth-child(2).active,
     .links .menu a:nth-child(3).active,
     .links .menu a:nth-child(4).active,
-    .links .menu a:nth-child(5).active {
+    .links .menu a:nth-child(5).active,
+    .links .menu a:nth-child(6).active {
         color: var(--white); 
         font-weight: bold; 
         background-color: var(--lightpink);
@@ -217,27 +219,29 @@ and (max-width : 1024px) {
         display: none;
       }
   
-    .links .menu a:nth-child(1),
-    .links .menu a:nth-child(2),
-    .links .menu a:nth-child(3),
-    .links .menu a:nth-child(4),
-    .links .menu a:nth-child(5) {
-        background-color: var(--white);
-        width: 100%; 
-        text-align: center;
-    }
-    .links .menu a:nth-child(1).active,
-    .links .menu a:nth-child(2).active,
-    .links .menu a:nth-child(3).active,
-    .links .menu a:nth-child(4).active,
-    .links .menu a:nth-child(5).active {
-        color: var(--white); 
-        font-weight: bold; 
-        background-color: var(--lightpink);
-        padding-left: 0;
-        padding-right: 0;
-        border-radius: 0;
-        text-align: center;
-    }
+      .links .menu a:nth-child(1),
+      .links .menu a:nth-child(2),
+      .links .menu a:nth-child(3),
+      .links .menu a:nth-child(4),
+      .links .menu a:nth-child(5),
+      .links .menu a:nth-child(6) {
+          background-color: var(--white);
+          width: 100%; 
+          text-align: center;
+      }
+      .links .menu a:nth-child(1).active,
+      .links .menu a:nth-child(2).active,
+      .links .menu a:nth-child(3).active,
+      .links .menu a:nth-child(4).active,
+      .links .menu a:nth-child(5).active,
+      .links .menu a:nth-child(6).active {
+          color: var(--white); 
+          font-weight: bold; 
+          background-color: var(--lightpink);
+          padding-left: 0;
+          padding-right: 0;
+          border-radius: 0;
+          text-align: center;
+      }
 }
 
