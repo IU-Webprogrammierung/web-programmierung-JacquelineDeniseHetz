@@ -506,11 +506,24 @@ body.fill header .title span a {
 #home_page .horizontal .flex .content .projectname.indent {
   transform: translateX(18%);
 }
-@media (max-width: 767px) {
+
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  #home_page .horizontal .flex .content .projectname.indent {
+    transform: translateX(25%);
+  }
+
+}
+
+@media (min-width : 768px) 
+and (max-width : 1024px) {
   #home_page .horizontal .flex .content .projectname.indent {
     transform: translateX(38%);
   }
+
 }
+
+
 #home_page .horizontal .flex .content .projectname.align-right {
   text-align: right;
 }
@@ -557,6 +570,27 @@ body.fill header .title span a {
   overflow: hidden;
   margin-bottom: 10px;
 }
+
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  #home_page .horizontal .flex .content .showonhover .overflow {
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  #home_page .horizontal .flex .content .showonhover .overflow {
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+
+}
+
+
+
 #home_page .horizontal .flex .content .showonhover .overflow > div {
   transform: translateY(40px);
   transition: 1s ease;
@@ -600,13 +634,20 @@ body.fill header .title span a {
   position: relative;
   z-index: -1;
 }
-@media (max-width: 767px) {
+
+@media (min-width : 320px) 
+and (max-width : 480px) {
   #home_page .horizontal .flex img {
     width: calc(100% - 30px);
     margin-left: 15px;
     filter: grayscale(0);
+    display: block;
+    justify-content: center;
   }
+
 }
+
+
 #home_page .slider {
   padding: 80px 0;
   margin-top: 7%;
