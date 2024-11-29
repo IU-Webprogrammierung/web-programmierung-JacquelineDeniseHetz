@@ -1,276 +1,261 @@
 /* CSS Document Über mich */
-
 /* Grundlegende Reset-Styles */
 html, body, * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Borisna', sans-serif;
-    cursor: none;
-  }
-  /* Farben */
-  :root {
-    --pink: #ff5d8f;
-  }
-  
-  /* Body Styles */
-  body {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  /* BodyBG*/
-  body {
-    background-color: #000;
-  }
-  
-  body.fill header .links a {
-    color: #000;
-  }
-  body.fill header .title {
-    color: #000;
-  }
-  
-  body.fill header .title span a {
-    color: #000;
-  }
-  
-  #home_page {
-    background-color: #000;
-    transition: 0.3s ease;
-    overflow: hidden;
-  }
-  
-  /* Überschriftenbereich */
-  .headline-section {
-    margin-top: 100px; 
-    padding: 250px 0;
-    z-index: 0;
-    background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .headline-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Borisna', sans-serif;
+  cursor: none;
+}
+/*--------------------------------*/ 
+/* Farben */
+:root {
+  --pink: #ff5d8f;
+}
+/*--------------------------------*/
+/* Body Styles */
+body {
+  background-color: #000;
+  color: #fff;
+}
+body.fill header .links a {
+  color: #000;
+}
+body.fill header .title {
+  color: #000;
+}
+
+body.fill header .title span a {
+  color: #000;
+}
+#home_page {
+  background-color: #000;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+/*--------------------------------*/  
+/* Überschriftenbereich */
+.headline-section {
+  margin-top: 100px;
+  padding: 250px 0;
+  z-index: 0;
+  background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.big-headline {
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  text-align: center;
+}
+.subheadline {
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
   .big-headline {
-   color: white;
-      font-size: 5em;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      text-align: center;
+    font-size: 2.5em;
   }
-  
   .subheadline {
-    font-size: 1.5em;
-    color: #fff;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
   }
-  
-  @media (max-width: 767px) {
-    .big-headline {
-      font-size: 2.5em;
-    }
-  
-    .subheadline {
-      font-size: 1.2em;
-    }
-  }
-  
-  
-  
-  /* Seitencontent */
-  
-  
-  .contentcontainer {
-    width: 95%;
-    max-width: 1500px;
-    margin: 10px auto 50px auto;
-    padding: 50px 20px;
-  }
-  
-  .points {
-    z-index: 2;
-    position: relative;
-    background: #000;
-    color: #fff;
-    overflow: hidden;
-  }
-  
+}  
+/*--------------------------------*/   
+/* Seitencontent */ 
+.contentcontainer {
+  width: 95%;
+  max-width: 1500px;
+  margin: 10px auto 50px auto;
+  padding: 50px 20px;
+}
+.points {
+  z-index: 2;
+  position: relative;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+.points .flex {
+  display: -webkit-box;
+  -webkit-box-align: start;
+}
+@media (max-width: 767px) {
   .points .flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  
-  @media (max-width: 767px) {
-    .points .flex {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-    }
-  }
-  
-  .points .flex .num {
-    padding-left: 15px;
-    background-attachment: fixed;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
-    background-size: cover;
-  }
-  
-  .points .flex > div[data-scrollmagic-pin-spacer] {
-    padding-left: 0;
-    padding-bottom: 0 !important;
-  }
-  
+}
+.points .flex .num {
+  padding-left: 15px;
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
+  background-size: cover;
+}
+.points .flex > div[data-scrollmagic-pin-spacer] {
+  padding-left: 0;
+  padding-bottom: 0 !important;
+}
+.points .flex h2,
+.points .flex .num {
+  font-size: 60px;
+  font-family: 'Borisna';
+  margin-top: 0;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
   .points .flex h2,
   .points .flex .num {
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'Borisna';
     margin-top: 0;
     margin-bottom: 25px;
     display: inline-block;
   }
-  
-  .points .flex h2 p,
-  .points .flex .num p {
-    font-family: 'LaoMN';
-    font-weight: 100;
-  }
-  
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  .points .flex h2,
   .points .flex .num {
-    width: 90px;
+    font-size: 45px;
+    font-family: 'Borisna';
+    margin-top: 0;
+    margin-bottom: 25px;
+    display: inline-block;
   }
-  
-  .points .flex .num.stick {
-    position: fixed;
-    top: 110px;
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  .points .flex h2,
+  .points .flex .num {
+    font-size: 50px;
+    font-family: 'Borisna';
+    margin-top: 0;
+    margin-bottom: 25px;
+    display: inline-block;
   }
-  
+}
+.points .flex h2 p,
+.points .flex .num p {
+  font-family: 'LaoMN';
+  font-weight: 100;
+}
+.points .flex .num {
+  width: 90px;
+}
+.points .flex .num.stick {
+  position: fixed;
+  top: 110px;
+}
+.points .flex p {
+  font-size: 25px;
+  padding-left: 10px;
+  font-family: 'LaoMN';
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
   .points .flex p {
-    font-size: 25px;
+    font-size: 15px;
     padding-left: 10px;
-      font-family: 'LaoMN';
+    font-family: 'LaoMN';
   }
-  
-  
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  .points .flex p {
+    font-size: 17px;
+    padding-left: 10px;
+    font-family: 'LaoMN';
+  }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  .points .flex p {
+    font-size: 20px;
+    padding-left: 10px;
+    font-family: 'LaoMN';
+  }
+}
+.points .flex > div {
+  padding: 0 15px;
+  margin-top: 0 !important;
+  width: 90%;
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
   .points .flex > div {
     padding: 0 15px;
     margin-top: 0 !important;
-  }
-  
-  
-  .points .first_point .flex {
     width: 100%;
   }
-  
-  .points .first_point .flex.six-four > div:nth-child(1) {
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  .points .flex > div {
+    padding: 0 15px;
+    margin-top: 0 !important;
     width: 100%;
   }
-  
-  
-  .points .first_point .flex.six-four > div:nth-child(1) > div:nth-child(2) {
-    width: calc(100% - 90px);
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  .points .flex > div {
+    padding: 0 15px;
+    margin-top: 0 !important;
+    width: 90%;
   }
-  
-  .points .first_point .flex.six-four > div:nth-child(2) {
-    width: 100%;
-  }
-  
-  .points .first_point.point_two {
-    width: 100%;
-    margin-top: 50px;
-    padding: 0;
-  }
-  
-  .points .first_point.point_two .flex .flex {
-    width: 100%;
-  }
-  
-  .points .first_point.point_two .flex .flex > div:nth-child(1) {
-    width: 90px;
-  }
-  
-  .points .first_point.point_two .flex .flex > div:nth-child(2) {
-    width: calc(100% - 90px);
-  }
-  
-  .points .first_point .align-center {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .points .first_point .align-center p {
-    width: 55%;
-  }
-  
-  .points .first_point.only_point {
-    padding: 0px 0 0px 0;
-  }
-  
-  .points .first_point.only_point p {
-    padding-left: 0 !important;
-  }
-  
-  .points .first_point.only_point .flex .flex > div {
-    padding-left: 8px;
-  }
-  
-  .points .contentcontainer .first_point.point_one .flex.six-four .flex p {
-    margin-top: 2%;
-  }
-
-  .slick-slider {
-    z-index: -1;
-  }
-  
-  .full-width {
-    width: 100% !important;
-  }
- /* Slideranimation */ 
- .first_slider {
+}
+.points .first_point .flex {
+  width: 100%;
+}
+.points .first_point.point_two {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0;
+}
+/*--------------------------------*/  
+/* Slideranimation */ 
+.first_slider {
   overflow: hidden;
   position: relative;
   width: 100%; 
   max-width: 100%; 
   margin-top: 5%;
-}
-
+}  
 .slider-container {
   display: flex;
   width: 100%;
 }
-
 .slider-track {
   display: flex;
   white-space: nowrap;
-  animation: slide 15s linear infinite;
+  animation: slide 25s linear infinite;
 }
-
 .slider-track img {
   width: auto;
   height: 300px; 
   flex: 0 0 auto;
   margin-right: 20px;
 }
-
 @keyframes slide {
   0% {
       transform: translateX(0);
@@ -279,4 +264,3 @@ html, body, * {
       transform: translateX(-100%);
   }
 }
-
