@@ -1,5 +1,4 @@
 /* CSS Document portfolio*/
-
 /* Grundlegende Reset-Styles */
 html, body, * {
     box-sizing: border-box;
@@ -7,151 +6,139 @@ html, body, * {
     padding: 0;
     font-family: 'Borisna', sans-serif;
     cursor: none;
-  }
-  /* Farben */
-  :root {
-    --pink: #ff5d8f;
-  }
-  
-  /* Body Styles */
-  body {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  /* BodyBG*/
-  body {
-    background-color: #000;
-  }
-  body.fill {
-    background-color: var(--pink);
-  }
-  body.fill #home_page {
-    background-color: var(--pink);
-  }
-  body.fill #startpage {
-    background-color: var(--pink) !important;
-  }
-  body.fill .cursor {
-    background-color: var(--pink);
-  }
-  body.fill .firstname:before {
-    z-index: 1 !important;
-  }
-  body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
-  }
-  
-  body.fill header.nottransparent {
-    background-color: var(--pink) !important;
-  }
-  body.fill header .links a {
-    color: #000;
-  }
-  body.fill header .title {
-    color: #000;
-  }
-  
-  #home_page {
-    background-color: #000;
-    transition: 0.3s ease;
-    overflow: hidden;
-  }
-  
-  /* Überschriftenbereich */
-  .headline-section {
-    margin-top: 100px; 
-    padding: 250px 0;
-    z-index: 0;
-    background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
+}
+/*--------------------------------*/ 
+/* Farben */
+:root {
+  --pink: #ff5d8f;
+}
+/*--------------------------------*/ 
+/* Body Styles */
+body {
+  background-color: #000;
+  color: #fff;
+}
+/*--------------------------------*/ 
+/* BodyBG*/
+body {
+  background-color: #000;
+}
+body.fill {
+  background-color: var(--pink);
+}
+body.fill #home_page {
+  background-color: var(--pink);
+}
+body.fill #startpage {
+  background-color: var(--pink) !important;
+}
+body.fill .cursor {
+  background-color: var(--pink);
+}
+body.fill .firstname:before {
+  z-index: 1 !important;
+}
+body.fill .firstname span:nth-child(2), body.fill .firstname span:nth-child(4) {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom, #000000 0%, #000000 40%, #fff 40%, #fff 100%);
+}
+body.fill header.nottransparent {
+  background-color: var(--pink) !important;
+}
+body.fill header .links a {
+  color: #000;
+}
+body.fill header .title {
+  color: #000;
+}
+#home_page {
+  background-color: #000;
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+/*--------------------------------*/ 
+/* Überschriftenbereich */
+.headline-section {
+  margin-top: 100px; 
+  padding: 250px 0;
+  z-index: 0;
+  background-image: url("../Medien/Bilder/Pikachu_Animationm.GIF");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.headline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.big-headline {
+ color: white;
+    font-size: 5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .headline-container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+}
+.subheadline {
+  font-size: 1.5em;
+  color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
   .big-headline {
-   color: white;
-      font-size: 5em;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-      text-align: center;
+    font-size: 2.5em;
   }
-  
   .subheadline {
-    font-size: 1.5em;
-    color: #fff;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
   }
-  
-  @media (max-width: 767px) {
-    .big-headline {
-      font-size: 2.5em;
-    }
-  
-    .subheadline {
-      font-size: 1.2em;
-    }
-  }
-  
-  /* Seitencontent */
-
-  .verteilercontainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-  }
-  
-  .image-box {
-      margin: 15px;
-      text-align: center;
-      width: 300px;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-  }
-  
-  .image-box:hover {
-      transform: scale(1.05);
-  }
-  
-  .image-box img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 1px solid #ddd;
-  }
-  
-  .caption {
-      padding: 15px;
-      background-color: #fff;
-      font-size: 18px;
-      color: #333;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .image-box:hover .caption {
-      background-color: #ff5d8f;
-      color: #fff;
-  }
- 
-  .image-box a {
-      text-decoration: none;
-      color: inherit;
-  }
+}
+/*--------------------------------*/ 
+/* Seitencontent */
+.verteilercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.image-box {
+  margin: 15px;
+  text-align: center;
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.image-box:hover {
+  transform: scale(1.05);
+}
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+.caption {
+  padding: 15px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+.image-box:hover .caption {
+  background-color: #ff5d8f;
+  color: #fff;
+}
+.image-box a {
+  text-decoration: none;
+  color: inherit;
+}
+/*--------------------------------*/ 
