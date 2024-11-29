@@ -5,7 +5,6 @@
     display: flex;
     margin-left: 5%; 
 }
-
 .back-button {
     display: inline-block;
     padding: 10px 20px;
@@ -16,7 +15,75 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
 .back-button:hover {
     background-color: #ffafcc; 
+}
+/*--------------------------------*/ 
+/* Smartphone */
+@media (min-width : 320px) 
+and (max-width : 480px) { 
+    .container_button {
+        margin-top: 120px;
+        display: flex;
+        margin-left: 5%; 
+    }
+    .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 15px;
+        color: #fff;
+        background-color: var(--pink); 
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+        background-color: #ffafcc; 
+    }
+}
+/*--------------------------------*/ 
+/* Zwischenbereich */
+@media (min-width : 481px) 
+and (max-width : 767px) { 
+    .container_button {
+        margin-top: 120px;
+        display: flex;
+        margin-left: 5%; 
+    }
+    .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: var(--pink); 
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+        background-color: #ffafcc; 
+    }
+}
+/*--------------------------------*/ 
+/* Tablet */
+@media (min-width : 768px) 
+and (max-width : 1024px) { 
+    .container_button {
+        margin-top: 120px;
+        display: flex;
+        margin-left: 5%; 
+    }
+    .back-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        background-color: var(--pink); 
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .back-button:hover {
+        background-color: #ffafcc; 
+    }
 }
