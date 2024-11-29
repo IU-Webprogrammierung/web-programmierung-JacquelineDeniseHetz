@@ -1,4 +1,5 @@
 /* CSS-Dokument Header mit Responsivität*/
+/*Title und co*/ 
 .title a {
     color: var(--white);
     text-decoration: none;
@@ -18,6 +19,7 @@
 .title .kontakt__icon {
     display: none;
 }
+/*--------------------------------*/ 
 /* Smartphone */
 @media (min-width : 320px) 
     and (max-width : 480px) {
@@ -114,6 +116,7 @@
         text-align: center;
     }
 }
+/*--------------------------------*/ 
 /* Zwischenbereich Smartphone und Tablet */
 @media (min-width : 481px) 
     and (max-width : 767px) {
@@ -211,6 +214,7 @@
         text-align: center;
     }
 }
+/*--------------------------------*/ 
 /* Tablet */
 @media (min-width : 768px) 
 and (max-width : 1024px) {
@@ -307,4 +311,3 @@ and (max-width : 1024px) {
         text-align: center;
       }
 }
-
