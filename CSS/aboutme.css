@@ -178,7 +178,7 @@ and (max-width : 480px) {
     font-size: 15px;
     padding-left: 10px;
     font-family: 'LaoMN';
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 @media (min-width : 481px) 
@@ -187,7 +187,7 @@ and (max-width : 767px) {
     font-size: 17px;
     padding-left: 10px;
     font-family: 'LaoMN';
-    margin-top: 10%;
+    margin-top: 3.5%;
   }
 }
 @media (min-width : 768px) 
@@ -196,7 +196,7 @@ and (max-width : 1024px) {
     font-size: 20px;
     padding-left: 10px;
     font-family: 'LaoMN';
-    margin-top: 10%;
+    margin-top: 2%;
   }
 }
 .points .flex > div {
