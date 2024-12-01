@@ -1,0 +1,46 @@
+/* CSS Document Webplayer*/
+.webradio-player {
+    height: auto;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
+    .webradio-player {
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+    .webradio-player {
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+    .webradio-player {
+        height: auto;
+        margin: 20px auto;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
