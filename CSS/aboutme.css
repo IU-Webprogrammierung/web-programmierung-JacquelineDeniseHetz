@@ -170,6 +170,7 @@ and (max-width : 1024px) {
   font-size: 25px;
   padding-left: 10px;
   font-family: 'LaoMN';
+  margin-top: 10%;
 }
 @media (min-width : 320px) 
 and (max-width : 480px) {
@@ -177,6 +178,7 @@ and (max-width : 480px) {
     font-size: 15px;
     padding-left: 10px;
     font-family: 'LaoMN';
+    margin-top: 10%;
   }
 }
 @media (min-width : 481px) 
@@ -185,6 +187,7 @@ and (max-width : 767px) {
     font-size: 17px;
     padding-left: 10px;
     font-family: 'LaoMN';
+    margin-top: 10%;
   }
 }
 @media (min-width : 768px) 
@@ -193,6 +196,7 @@ and (max-width : 1024px) {
     font-size: 20px;
     padding-left: 10px;
     font-family: 'LaoMN';
+    margin-top: 10%;
   }
 }
 .points .flex > div {
