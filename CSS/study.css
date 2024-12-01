@@ -315,9 +315,10 @@ and (max-width : 1024px) {
   gap: 20px;
   justify-content: center;
   overflow-x: auto; 
+  margin-top: 10px;
 }
 .image-gallery img {
-  width: 300px;
+  width: 600px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -587,6 +588,7 @@ and (max-width : 1024px) {
 }
 .pdf-container {
   background-color: transparent;
+  display: contents;
   padding: 20px;
   position: center;
   margin-top: 50px;
@@ -602,11 +604,11 @@ and (max-width : 1024px) {
 .pdf-title {
   font-size: 2em;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--lightpink);
 }
 .pdf-description {
   font-size: 1.2em;
-  color: #666;
+  color: var(--lightpink);
   margin-bottom: 20px;
   font-family: 'LaoMN', sans-serif;
 }
@@ -626,7 +628,7 @@ and (max-width : 1024px) {
 .titlebutton {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--lightpink);
 }
 .button-grid {
   display: grid;
@@ -637,15 +639,15 @@ and (max-width : 1024px) {
   padding: 15px 20px;
   text-decoration: none;
   font-size: 1.2em;
-  color: #fff;
-  background-color: #ff5d8f;
+  color: var(--white);
+  background-color: var(--pink);
   border-radius: 5px;
   text-align: center;
   transition: background-color 0.3s ease;
   display: block;
 }
 .figma-button:hover {
-  background-color: #ff2d6f;
+  background-color: var(--lightpink);
 }
 @media (max-width: 767px) {
   .button-grid {
