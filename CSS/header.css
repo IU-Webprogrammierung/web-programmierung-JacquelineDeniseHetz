@@ -95,28 +95,23 @@ header {
     height: 60px;
   }
   
-  header .title,
-  header .links a {
+  header .title {
     color: #fff;
     text-decoration: none;
     font-size: 36px;
     line-height: 1.6;
   }
   
-  header .links a {
-    margin: auto;
-  }
-  
-  header .links a:hover {
+  .menu a:hover {
     color: var(--pink);
   }
   
-  header .links a.active {
-      color: var(--white); 
-      font-weight: bold; 
-      background-color: var(--lightpink);
-      padding-left: 10px;
-      padding-right: 10px;
-      border-radius: 5px;
+  .menu a.active {
+    color: var(--white); 
+    font-weight: bold; 
+    background-color: var(--lightpink);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
   }
   
