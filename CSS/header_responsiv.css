@@ -39,12 +39,10 @@
         height: 100%;
         width: 100%;
         background-color: #000;
-        -webkit-background-fill-color: rgb(0, 0, 0);
         flex-direction: column;
         align-items: flex-start;
         gap: 0.1rem;
         transition: right 0.8s ease;
-        visibility: visible;
         opacity: 1 !important;
     }
     .links .menu__icon {
@@ -65,7 +63,6 @@
         padding: 0.5rem 0;
         text-decoration: none;
         font-size: 1.1rem;
-        border-bottom: 10px;
         align-self: center;
         margin: 0;
     }
@@ -136,12 +133,10 @@
         height: 100%;
         width: 100%;
         background-color: #000;
-        -webkit-background-fill-color: rgb(0, 0, 0);
         flex-direction: column;
         align-items: flex-start;
         gap: 0.1rem;
         transition: right 0.8s ease;
-        visibility: visible;
         opacity: 1 !important;
     }
     .links .menu__icon {
@@ -162,7 +157,6 @@
         padding: 0.5rem 0;
         text-decoration: none;
         font-size: 1.1rem;
-        border-bottom: 10px;
         align-self: center;
         margin: 0;
     }
@@ -234,12 +228,10 @@ and (max-width : 1024px) {
         height: 100%;
         width: 100%;
         background-color: #000;
-        -webkit-background-fill-color: rgb(0, 0, 0);
         flex-direction: column;
         align-items: flex-start;
         gap: 0.1rem;
         transition: right 0.8s ease;
-        visibility: visible;
         opacity: 1 !important;
     }
     .links .menu__icon {
@@ -260,7 +252,6 @@ and (max-width : 1024px) {
         padding: 0.5rem 0;
         text-decoration: none;
         font-size: 1.5rem;
-        border-bottom: 10px;
         align-self: center;
         margin: 0;
     }
@@ -311,3 +302,86 @@ and (max-width : 1024px) {
         text-align: center;
       }
 }
+
+/* Allgemeine Menüeinstellungen */
+.menu {
+    position: fixed;
+        z-index: 1000;
+        right: -100%;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        transition: right 0.8s ease;
+        opacity: 1 !important;
+}
+
+/* Menü sichtbar machen in der mobilen Ansicht */
+.menu.active {
+    display: flex; /* Zeige das Menü an */
+    opacity: 1;
+    right: 0;
+}
+
+/* Links im Menü */
+.menu a {
+    color: var(--pink);
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        align-self: center;
+        margin: 0;
+}
+
+.menu a:hover {
+    color: var(--lightpink);
+}
+
+.menu a:nth-child(1),
+ .menu a:nth-child(2),
+.menu a:nth-child(3),
+ .menu a:nth-child(4),
+.menu a:nth-child(5),
+ .menu a:nth-child(6) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+
+     .menu a:nth-child(1).active,
+   .menu a:nth-child(2).active,
+.menu a:nth-child(3).active,
+    .menu a:nth-child(4).active,
+ .menu a:nth-child(5).active,
+   .menu a:nth-child(6).active {
+        color: var(--white); 
+        font-weight: bold; 
+        background-color: var(--lightpink);
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+        text-align: center;
+      }
+
+/* Desktop-Ansicht */
+@media (min-width: 1025px) {
+    .menu {
+        display: flex; /* Links immer sichtbar */
+        position: static; /* Kein Overlay-Effekt */
+        flex-direction: row; /* Links horizontal anordnen */
+        justify-content: flex-end; /* Rechtsbündig im Header */
+        background-color: transparent; /* Kein Hintergrund */
+        height: auto; /* Standardhöhe */
+        opacity: 1; /* Immer sichtbar */
+    }
+
+    .menu a {
+        color: var(--white);
+        margin: 0 1rem; /* Abstand zwischen Links */
+        font-size: 1rem;
+    }
+}
+
