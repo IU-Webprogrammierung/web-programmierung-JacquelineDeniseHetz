@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const header = document.querySelector('header');
   const cursor = document.querySelector('.cursor');
 
-  // Scroll event to toggle header transparency
+  // Scroll-Ereignis zum Umschalten der Headertransparenz
   window.addEventListener('scroll', function() {
     if (window.scrollY > 50) {
       header.classList.add('nottransparent');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // Initialize slick for the loading-slider
+  // Preloader Inhalt / Backup
   $('.loading-slider').slick({
     dots: false,
     arrows: false,
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     pauseOnHover: false,
   });
 
-  // Reveal function for loader
   function reveal() {
     setTimeout(function () {
       $('#loader').remove();
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   }
 
-  // Slick afterChange event
+  // Seite nach Preloader starten
   $('.loading-slider').on("afterChange", function (event, slick, currentSlide) {
     if (currentSlide === 5) {
       $(this).slick('slickPause');
@@ -53,9 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-
-  // Lazy load images
+  // Lazy load images - Bilder einfacher laden lassen - Datensparversuch
   $(window).on('load', function () {
     $('img[data-lazy-src]').each(function () {
       var getOffsetTop = $(this).offset().top;
@@ -65,13 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Hover effects for center images
+  // Hover effekt center images
   $('.centerimg img, .centerimg .firstname, .centerimg .surname').hover(
     function () { $('body').addClass('fill'); },
     function () { $('body').removeClass('fill'); }
   );
 
-  // Custom cursor logic
+  // Custom cursor logik - Backup
   function myFunc() {
     let xMousePos = 0, yMousePos = 0;
     let lastScrolledLeft = 0, lastScrolledTop = 0;
@@ -158,7 +155,7 @@ checkPosition();
     });
   });
 
-  // Hover effects for cursor
+  // Hover effekt cursor
   $('.horizontal .items .flex').hover(
     function () {
       $(this).addClass('show');

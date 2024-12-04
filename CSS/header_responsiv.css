@@ -1,0 +1,354 @@
+/* CSS-Dokument Header mit Responsivität*/
+/*Title und co*/ 
+.title a {
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    width: 200%;
+}
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 36px;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.links .menu__icon {
+    display: none;
+}
+.title .kontakt__icon {
+    display: none;
+}
+/*--------------------------------*/ 
+/* Smartphone */ /* Menü sichtbar machen in der mobilen Ansicht */
+@media (min-width : 320px) 
+    and (max-width : 480px) {
+    header .title span a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+      }
+    header .links {
+        position: relative;
+      }
+    .menu {
+        position: fixed;
+        justify-content: flex-start;
+        display: flex;
+        z-index: 1000;
+        right: -100%;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        transition: right 0.8s ease;
+        opacity: 1 !important;
+    }
+    .links .menu__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .links .close__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .menu.active {
+        
+        right: 0;
+    }
+    .menu a {
+        color: var(--pink);
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        align-self: center;
+        margin: 0;
+    }
+    .menu a:hover {
+    color: var(--lightpink);
+    }
+    .title .kontakt__icon {
+        display: inline-block; 
+        background: var(--white);
+        border: 3px solid;
+        border-radius: 5px;
+        color: var(--pink);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .title {
+        align-content: center;
+    }
+    header .title .kontakt__icon:hover {
+        color: var(--lightpink);
+      }
+    header .title span a {
+        display: none;
+      }
+    .menu a:nth-child(1),
+    .menu a:nth-child(2),
+    .menu a:nth-child(3),
+    .menu a:nth-child(4),
+    .menu a:nth-child(5),
+    .menu a:nth-child(6) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .menu a:nth-child(1).active,
+    .menu a:nth-child(2).active,
+    .menu a:nth-child(3).active,
+    .menu a:nth-child(4).active,
+    .menu a:nth-child(5).active,
+    .menu a:nth-child(6).active {
+        color: var(--white); 
+        font-weight: bold; 
+        background-color: var(--lightpink);
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+}
+/*--------------------------------*/ 
+/* Zwischenbereich Smartphone und Tablet */
+@media (min-width : 481px) 
+and (max-width : 767px) {
+    header .title span a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+      }
+    header .links {
+        position: relative;
+      }
+    .menu {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1000;
+        right: -100%;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        transition: right 0.8s ease;
+        opacity: 1 !important;
+    }
+    .links .menu__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .links .close__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .menu.active {
+        right: 0;
+    }
+    .menu a {
+        color: var(--pink);
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        align-self: center;
+        margin: 0;
+    }
+    .menu a:hover {
+    color: var(--lightpink);
+    }
+    .title .kontakt__icon {
+        display: inline-block; 
+        background: var(--white);
+        border: 3px solid;
+        border-radius: 5px;
+        color: var(--pink);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .title {
+        align-content: center;
+    }
+    header .title .kontakt__icon:hover {
+        color: var(--lightpink);
+      }
+    header .title span a {
+        display: none;
+      }
+    .menu a:nth-child(1),
+    .menu a:nth-child(2),
+    .menu a:nth-child(3),
+    .menu a:nth-child(4),
+    .menu a:nth-child(5),
+    .menu a:nth-child(6) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .menu a:nth-child(1).active,
+    .menu a:nth-child(2).active,
+    .menu a:nth-child(3).active,
+    .menu a:nth-child(4).active,
+    .menu a:nth-child(5).active,
+    .menu a:nth-child(6).active {
+        color: var(--white); 
+        font-weight: bold; 
+        background-color: var(--lightpink);
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+}
+/*--------------------------------*/ 
+/* Tablet */
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+    header .title span a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1em;
+      }
+    header .links {
+        position: relative;
+      }
+    .menu {
+        position: fixed;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1000;
+        right: -100%;
+        top: 100px;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+        transition: right 0.8s ease;
+        opacity: 1 !important;
+    }
+    .links .menu__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .links .close__icon {
+        display: inline-block; 
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+    .menu.active {
+        display: flex;
+        opacity: 1;
+        right: 0;
+    }
+    .menu a {
+        color: var(--pink);
+        padding: 0.5rem 0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        align-self: center;
+        margin: 0;
+    }
+    .menu a:hover {
+    color: var(--lightpink);
+    }
+    .title .kontakt__icon {
+        display: inline-block; 
+        background: var(--white);
+        border: 3px solid;
+        border-radius: 5px;
+        color: var(--pink);
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .title {
+        align-content: center;
+    }
+    header .title .kontakt__icon:hover {
+        color: var(--lightpink);
+      }
+    header .title span a {
+        display: none;
+      }
+    .menu a:nth-child(1),
+    .menu a:nth-child(2),
+    .menu a:nth-child(3),
+    .menu a:nth-child(4),
+    .menu a:nth-child(5),
+    .menu a:nth-child(6) {
+        background-color: var(--white);
+        width: 100%; 
+        text-align: center;
+    }
+    .menu a:nth-child(1).active,
+    .menu a:nth-child(2).active,
+    .menu a:nth-child(3).active,
+    .menu a:nth-child(4).active,
+    .menu a:nth-child(5).active,
+    .menu a:nth-child(6).active {
+        color: var(--white); 
+        font-weight: bold; 
+        background-color: var(--lightpink);
+        padding-left: 0;
+        padding-right: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+}
+/*--------------------------------*/ 
+/* Desktop */
+@media (min-width : 1025px)  {
+    header .links {
+        display: none;
+      }
+}

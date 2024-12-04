@@ -1,71 +1,28 @@
+/* JS-Dokument Über mich*/
 $(document).ready(function () {
-    // Overlay beim Start
-    $('.second-overlay').addClass('start');
-    window.scrollTo(0, 0);
+    
+  // ScrollMagic Controller
+  var usableController = new ScrollMagic.Controller();
+  var winH = $(window).outerHeight();
 
-    // ScrollMagic Controller
-    var usableController = new ScrollMagic.Controller();
-    var winH = $(window).outerHeight();
+});
+/* Animation Bilder - Wie bekomme ich es als infitiv scroll hin? - noch offen*/
+window.addEventListener('load', () => {
+    const track = document.querySelector('.slider-track');
+    const clone = track.innerHTML;
+    track.innerHTML += clone; 
 
-    // Sticky Punkte-Animationen
-    var scrollPositions = {
-        firstnum: $('.points').offset().top,
-        secondnum: $('.point_two').offset().top - 100
-    };
+    let offset = 0;
+    const speed = 2; // Geschwindigkeit 
 
-    $window.scroll(function () {
-        var scrollTop = $window.scrollTop();
-
-        // P 1
-        $(".point_one").toggleClass('pinit', scrollTop >= scrollPositions.firstnum);
-
-        // P 2
-        $(".point_two").toggleClass('pinit', scrollTop >= scrollPositions.secondnum);
-    });
-
-    new Parallax(document.getElementById('scene'));
-
-    var currentPath = window.location.pathname.split("/").pop();
-    $('.links a').each(function () {
-        if ($(this).attr('href').split("/").pop() === currentPath) {
-            $(this).addClass('active');
+    function animateSlider() {
+        offset -= speed;
+        if (Math.abs(offset) >= track.scrollWidth / 2) {
+            offset = 0; 
         }
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.first_slider');
-
-  let scrollSpeed = 4; 
-
-  function autoScroll() {
-    
-    slider.scrollLeft += scrollSpeed;
-
-    
-    if (slider.scrollLeft >= slider.scrollWidth / 2) {
-      slider.scrollLeft = 0;
+        track.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(animateSlider);
     }
 
-    requestAnimationFrame(autoScroll);
-  }
-
-  slider.innerHTML += slider.innerHTML;
-
-  autoScroll();
+    animateSlider();
 });
-
-  $('.horizontal .items .flex').hover(
-    function () {
-      $(this).addClass('show');
-      $('.cursor').addClass('view view' + ($(this).index() + 1));
-    },
-    function () {
-      $(this).removeClass('show');
-      $('.cursor').removeClass('view viewone viewtwo viewthree viewfour viewfive');
-    }
-  );
-
-  $('.horizontal .visit, .links a').hover(
-    function () { $('.cursor').addClass('link'); },
-    function () { $('.cursor').removeClass('link'); }
-  );

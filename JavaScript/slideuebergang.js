@@ -1,4 +1,4 @@
-// JavaScript Document Slideübergang
+// JavaScript Document Slideübergang zwischen Seiten bzw. auch Preloader zu Inhalt - Überarbeitung zum späteren Zeitpunkt, da nur Nice to Have
 
 // Funktion für den Slide-Übergang nach dem Preloader
 window.addEventListener('load', function () {

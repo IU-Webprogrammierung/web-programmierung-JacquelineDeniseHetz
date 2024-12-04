@@ -1,13 +1,12 @@
 /* CSS Document Über mich */
-
 /* Grundlegende Reset-Styles */
 html, body, * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Borisna', sans-serif;
-    cursor: none;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Borisna', sans-serif;
+  cursor: none;
+}
   /* Farben */
   :root {
     --pink: #ff5d8f;
@@ -30,9 +29,32 @@ html, body, * {
   body.fill header .title {
     color: #000;
   }
-  
-  body.fill header .title span a {
-    color: #000;
+
+.points .flex h2 p,
+.points .flex .num p {
+  font-family: 'LaoMN';
+  font-weight: 100;
+}
+.points .flex .num {
+  width: 90px;
+}
+.points .flex .num.stick {
+  position: fixed;
+  top: 110px;
+}
+.points .flex p {
+  font-size: 25px;
+  padding-left: 10px;
+  font-family: 'LaoMN';
+  margin-top: 2%;
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  .points .flex p {
+    font-size: 15px;
+    padding-left: 10px;
+    font-family: 'LaoMN';
+    margin-top: 5%;
   }
   
   /* Header Stuff mit Slideranimation und nav */
@@ -425,4 +447,3 @@ html, body, * {
     height: auto;
     display: block;
   }
-
