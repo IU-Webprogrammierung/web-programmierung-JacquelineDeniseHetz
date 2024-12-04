@@ -1,3 +1,5 @@
+/* JS-Dokument Footer*/
+
 // Footer einbinden
 fetch('../html/footer.html')
 .then(response => response.text())

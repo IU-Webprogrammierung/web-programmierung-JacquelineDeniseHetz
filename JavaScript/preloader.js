@@ -1,3 +1,5 @@
+// JavaScript Document Preloader
+
 // Preloader anzeigen und danach die Seite anzeigen
 window.addEventListener('load', function () {
     setTimeout(function () {

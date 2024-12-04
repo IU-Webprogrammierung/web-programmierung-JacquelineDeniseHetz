@@ -2,25 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const columns = document.querySelectorAll('.panelCon');
 
-    columns.forEach((column) => {
-        const content = column.innerHTML;
-
-        // Klonen des Inhalts, um die Spalte vollständig zu füllen und es unendlich scrollbar zu machen
-        while (column.scrollHeight < window.innerHeight * 2) {
-            column.innerHTML += content;
-        }
-
-        // Dynamische Höhe automatisch berechnen
-        const columnHeight = column.scrollHeight;
-
-        // CSS-Variable gesetzt
-        column.style.setProperty('--scroll-height', `${columnHeight}px`);
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const columns = document.querySelectorAll('.panelCon');
-
     // Funktion zum Aktivieren/Deaktivieren der Animation basierend auf der Bildschirmbreite (Responisivität)
     function handleResponsiveAnimations() {
         const isMobile = window.innerWidth <= 768;

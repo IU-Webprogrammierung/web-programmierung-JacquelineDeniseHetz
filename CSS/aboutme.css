@@ -170,7 +170,7 @@ and (max-width : 1024px) {
   font-size: 25px;
   padding-left: 10px;
   font-family: 'LaoMN';
-  margin-top: 10%;
+  margin-top: 2%;
 }
 @media (min-width : 320px) 
 and (max-width : 480px) {

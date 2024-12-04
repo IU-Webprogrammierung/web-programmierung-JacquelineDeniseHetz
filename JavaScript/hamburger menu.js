@@ -1,8 +1,10 @@
+/* JS-Dokument responsive Hamburger Menu Struktur*/
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.querySelector('.menu__icon');
     const menuDropdown = document.getElementById('menuDropdown');
 
-    // Toggle-Menü beim Klicken auf das Hamburger-Icon
+    // Toggle-Menü/Dropdown beim Klicken auf das Hamburger-Icon
     menuIcon.addEventListener('click', function() {
         menuDropdown.classList.toggle('active');
 
