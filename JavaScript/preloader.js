@@ -13,7 +13,6 @@ window.addEventListener('load', function () {
         // Animationen nach Entfernen des Preloaders starten
         document.querySelector('.firstimg').classList.add('start');
         document.querySelector('.secondimg').classList.add('start');
-        document.querySelector('header').classList.add('start');
         document.querySelector('.centerimg').classList.add('start');
-    }, 7050); // Preloader bleibt für 7 Sekunden sichtbar
+    }, 16000); // Sichtbarkeit Preloader
 });

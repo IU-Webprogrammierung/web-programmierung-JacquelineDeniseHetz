@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* CSS Document Startseite*/
+/* Grundlegendes */
 html,
 body,
 * {
@@ -8,12 +9,12 @@ body,
   font-family: 'Borisna';
   cursor: none;
 }
-
+/*--------------------------------*/
 /* Farbdefinierung */
 :root {
   --pink: #ff5d8f;
 }
-
+/*--------------------------------*/
 /* Overlaytausch*/
 .new-overlay {
   width: 100%;
@@ -27,21 +28,20 @@ body,
 .new-overlay.start {
   height: 100vh;
 }
-
 .second-overlay {
   width: 100%;
   position: fixed;
   top: 0;
   background: #000;
-  z-index: 999;
+  z-index: 20;
   height: 100vh;
   transition: 1s ease-in-out;
 }
 .second-overlay.start {
   height: 0vh;
 }
-
-/* BodyBG*/
+/*--------------------------------*/
+/* BodyBG */
 body {
   background-color: #000;
 }
@@ -75,7 +75,8 @@ body.fill header .links a {
 body.fill header .title {
   color: #000;
 }
-/* Pfoten */
+/*--------------------------------*/
+/* Pfoten Animation*/
 body.fill .paw:nth-child(1) {
   animation: fade 0.3s ease 1s forwards;
 }
@@ -94,53 +95,50 @@ body.fill .paw:nth-child(5) {
 body.fill header .title span a {
   color: #000;
 }
-
 .img-responsive {
   width: 100%;
 }
-
-/* loading screen */
-#loader {
-  opacity: 0;
+/*--------------------------------*/
+/* Pfotenpositionen */
+#home_page .pawclass .paw {
+  width: 120px;
   position: absolute;
-  transition: 1s ease-in-out;
-  font-size: 100px;
-  line-height: 1.3;
-  display: flex;
-  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease;
 }
-@media (max-width: 767px) {
-  #loader {
-    font-size: 48px;
+#home_page .pawclass .paw:nth-child(1) {
+  left: 7%;
+  top: 70%;
+}
+#home_page .pawclass .paw:nth-child(2) {
+  left: 20%;
+  top: 75%;
+}
+#home_page .pawclass .paw:nth-child(3) {
+  left: 2%;
+  top: 94%;
+}
+#home_page .pawclass .paw:nth-child(4) {
+  right: 16%;
+  top: 30%;
+}
+#home_page .pawclass .paw:nth-child(5) {
+  right: 4%;
+  top: 28%;
+}
+#home_page .pawclass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  #home_page .pawclass {
+    display: none;
   }
 }
-#loader .static-text {
-  z-index: 1;
-  width: 40%;
-  text-align: right;
-  padding-right: 15px;
-  transform: translateY(-150px);
-  margin-left: -5%;
-}
-#loader .loading-slider {
-  transition: 1s ease-in-out;
-  transform: translateY(-150px);
-}
-#loader.loading {
-  opacity: 1;
-  background-color: #fff;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  position: fixed;
-}
-#loader.loading .loading-slider {
-  width: 60%;
-}
-#loader.loading span.pink {
-  color: var(--pink);
-}
-
+/*--------------------------------*/
 /* Overlay black */
 .blackoverlay {
   width: 100%;
@@ -155,153 +153,13 @@ body.fill header .title span a {
   transform: translateY(0%);
   z-index: 1000;
 }
-
-/* Header Stuff mit Slideranimation und nav */
-header {
-  padding: 20px 0;
-  z-index: 3;
-  width: 100%;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  transition: 0.3s ease;
-  background-color: transparent;
-}
-header.start .title,
-header.start .links {
-  transform: translateY(0);
-}
-header.nottransparent {
-  background-color: #000 !important;
-  transition: background-color 0.3s ease;
-}
-
-header .container {
-  width: 90%;
-  margin: auto;
-  position: relative;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-
-header .title {
-  width: 50%;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  z-index: 9999;
-  height: 60px; 
-}
-
-header .title span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  animation: fadeText 12s infinite; 
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 36px;
-}
-
-header .title span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-header .title span:nth-child(2) {
-  animation-delay: 6s; 
-}
-
-header .title span a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 36px;
-}
-
-/* Animation für das Ein- und Ausblenden */
-@keyframes fadeText {
-  0%, 50%, 100% {
-    opacity: 0; 
-    transform: translateY(50px); 
-  }
-  20%, 45% {
-    opacity: 1; 
-    transform: translateY(0); 
-  }
-}
-
-header .links {
-  text-align: right;
-}
-
-header .links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 36px;
-  margin-left: 20px;
-}
-
-header .links {
-  transform: translateY(40px);
-  transition: 1s ease;
-  width: auto;
-  text-align: right;
-}
-
-@media (max-width: 767px) {
-  header .links {
-    display: flex;
-  }
-}
-header .title,
-header .links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 36px;
-  line-height: 1.6;
-}
-@media (max-width: 767px) {
-  header .title,
-  header .links a {
-    font-size: 22px;
-  }
-}
-header .links a {
-  margin: 0 15px;
-}
-header .links a:hover {
-  color: var(--pink);
-}
-@media (max-width: 767px) {
-  header .links a {
-    margin: 0 8px;
-  }
-}
-
-.margin-top {
-  margin-top: 25%;
-}
-
+/*--------------------------------*/
 /* BG, BG Animation, Me und Title*/
 #home_page {
   background-color: #000;
   transition: 0.3s ease;
   overflow: hidden;
 }
-
-
 #home_page .firstimg {
   background-image: url("../Medien/Bilder/Pikachu_Animationm_kleinerskaliert.gif");
   background-size: auto;
@@ -387,9 +245,10 @@ header .links a:hover {
   transition: transform 1s ease;
   transform: translateY(1080px);
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   #home_page .centerimg img {
     width: 62%;
+    margin-top: 10%;
   }
 }
 #home_page .centerimg.start img {
@@ -416,10 +275,83 @@ header .links a:hover {
   margin-top: -13px;
   background-color: transparent;
 }
-@media (max-width: 767px) {
+@media (max-width: 320px) {
   #home_page .centerimg .name .firstname {
     font-size: 42px;
     margin-top: 0px;
+  }
+  #home_page .centerimg .name {
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    transform: translateY(50%);
+    z-index: 2;
+    margin: auto;
+    position: relative;
+    width: 50%;
+  }
+}
+@media (min-width : 321px) 
+and (max-width : 480px) {
+  #home_page .centerimg .name .firstname {
+    font-size: 42px;
+    margin-top: 0px;
+  }
+  #home_page .centerimg .name {
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    transform: translateY(50%);
+    z-index: 2;
+    margin: auto;
+    position: relative;
+    width: 45%;
+  }
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  #home_page .centerimg .name .firstname {
+    font-size: 42px;
+    margin-top: 0px;
+  }
+  #home_page .centerimg .name {
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    transform: translateY(50%);
+    z-index: 2;
+    margin: auto;
+    position: relative;
+    width: 45%;
+  }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  #home_page .centerimg .name .firstname {
+    font-size: 60px;
+    margin-top: 10%;
+  }
+  #home_page .centerimg .name {
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    background-color: transparent;
+    text-align: center;
+    transform: translateY(50%);
+    z-index: 2;
+    margin: auto;
+    position: relative;
+    width: 40%;
   }
 }
 #home_page .centerimg .name .firstname.start span {
@@ -438,6 +370,22 @@ header .links a:hover {
   z-index: 0;
   top: -50%;
   left: 0;
+}
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  #home_page .centerimg .name .firstname::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: none;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 65%;
+    z-index: 0;
+    top: -50%;
+    left: 0;
+  }
 }
 #home_page .centerimg .name .surname {
   font-size: 78px;
@@ -509,6 +457,12 @@ header .links a:hover {
 #home_page .centerimg .change_img:nth-child(2):hover + img {
   opacity: 1;
 }
+@media (max-width: 1024px) {
+  #home_page .centerimg .change_img:nth-child(2):hover + img {
+    opacity: 1;
+    margin-top: 10%;
+  }
+}
 @keyframes fade {
   0% {
     opacity: 0;
@@ -517,45 +471,7 @@ header .links a:hover {
     opacity: 1;
   }
 }
-#home_page .pawclass {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 767px) {
-  #home_page .pawclass {
-    display: none;
-  }
-}
-/* Pfotenpositionen */
-#home_page .pawclass .paw {
-  width: 120px;
-  position: absolute;
-  opacity: 0;
-  transition: 0.3s ease;
-}
-#home_page .pawclass .paw:nth-child(1) {
-  left: 7%;
-  top: 70%;
-}
-#home_page .pawclass .paw:nth-child(2) {
-  left: 20%;
-  top: 75%;
-}
-#home_page .pawclass .paw:nth-child(3) {
-  left: 2%;
-  top: 94%;
-}
-#home_page .pawclass .paw:nth-child(4) {
-  right: 16%;
-  top: 30%;
-}
-#home_page .pawclass .paw:nth-child(5) {
-  right: 4%;
-  top: 28%;
-}
+/*--------------------------------*/
 /* Scrollbalken horizontal */
 #home_page .loadbar {
   width: 5%;
@@ -589,7 +505,6 @@ header .links a:hover {
     display: block;
   }
 }
-
 #home_page .horizontal .items {
   position: relative;
 }
@@ -622,17 +537,6 @@ header .links a:hover {
     transform: translateX(0%);
     margin-bottom: 15px;
   }
-}
-#home_page .horizontal .items:nth-child(4) .showonhover {
-  margin-top: 20%;
-}
-@media (max-width: 767px) {
-  #home_page .horizontal .items:nth-child(4) .showonhover {
-    margin-top: 10%;
-  }
-}
-#home_page .horizontal .items:nth-child(4) .flex {
-  margin-left: 0;
 }
 #home_page .horizontal .items a {
   text-decoration: none !important;
@@ -686,7 +590,20 @@ header .links a:hover {
 #home_page .horizontal .flex .content .projectname.indent {
   transform: translateX(18%);
 }
-@media (max-width: 767px) {
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  #home_page .horizontal .flex .content .projectname.indent {
+    transform: translateX(25%);
+  }
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  #home_page .horizontal .flex .content .projectname.indent {
+    transform: translateX(25%);
+  }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
   #home_page .horizontal .flex .content .projectname.indent {
     transform: translateX(38%);
   }
@@ -737,6 +654,27 @@ header .links a:hover {
   overflow: hidden;
   margin-bottom: 10px;
 }
+@media (min-width : 320px) 
+and (max-width : 480px) {
+  #home_page .horizontal .flex .content .showonhover .overflow {
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width : 481px) 
+and (max-width : 767px) {
+  #home_page .horizontal .flex .content .showonhover .overflow {
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width : 768px) 
+and (max-width : 1024px) {
+  #home_page .horizontal .flex .content .showonhover .overflow {
+    overflow: visible;
+    margin-bottom: 10px;
+  }
+}
 #home_page .horizontal .flex .content .showonhover .overflow > div {
   transform: translateY(40px);
   transition: 1s ease;
@@ -780,11 +718,14 @@ header .links a:hover {
   position: relative;
   z-index: -1;
 }
-@media (max-width: 767px) {
+@media (min-width : 320px) 
+and (max-width : 480px) {
   #home_page .horizontal .flex img {
     width: calc(100% - 30px);
     margin-left: 15px;
     filter: grayscale(0);
+    display: block;
+    justify-content: center;
   }
 }
 #home_page .slider {
@@ -872,39 +813,18 @@ header .links a:hover {
   font-size: 30px;
   margin-top: 35px;
 }
-
 #home_page .slider .flex img {
   width: 380px;
 }
-#home_page .social_links {
-  height: 100vh;
-  position: relative;
+#scroll-horizontal .items {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
 }
-#home_page .social_links .linked {
-  color: #fff;
-  text-align: center;
-  font-size: 100px;
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#scroll-horizontal.slide .items {
+  transform: translateX(0%);
 }
-#home_page .social_links .linked div {
-  margin: 25px 0 0 0px;
-  opacity: 0.5;
-  transition: 0.3s ease;
-  text-shadow: -1px 2px black;
-}
-#home_page .social_links .linked div.active {
-  opacity: 1;
-}
-
+/*--------------------------------*/
+/* Ladeanimation */
 #home_page #startpage {
   position: absolute;
   overflow: auto;
@@ -936,12 +856,4 @@ header .links a:hover {
   transition-delay: 5s;
   opacity: 0;
   z-index: -1;
-}
-
-#scroll-horizontal .items {
-  transform: translateX(100%);
-  transition: 0.5s ease-in-out;
-}
-#scroll-horizontal.slide .items {
-  transform: translateX(0%);
 }

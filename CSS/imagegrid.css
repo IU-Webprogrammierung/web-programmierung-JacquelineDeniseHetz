@@ -1,0 +1,88 @@
+/* CSS-Dokument Imagegrid*/
+.scrollable-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    gap: 1rem;
+    background-color: #000;
+    margin-top: 20px;
+    border-radius: 10px;
+    /* Dezente Transparenz oben, begrenzt auf 100px */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1) 100px);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1) 100px);
+}
+
+.panelCon {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 33.33%;
+    animation-timing-function: linear;
+}
+
+.panelCon.left {
+    animation: scroll-up 20s linear infinite;
+}
+
+.panelCon.middle {
+    animation: scroll-down 20s linear infinite;
+}
+
+.panelCon.right {
+    animation: scroll-up 20s linear infinite;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel img {
+    width: 80%; 
+    height: auto; 
+    border-radius: 50px;
+    margin-bottom: 1rem; 
+    display: block;
+}
+/*--------------------------------*/ 
+/* Animationen */
+@keyframes scroll-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes scroll-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+/*--------------------------------*/ 
+/* Responsivität */
+/* Smartphones & Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .scrollable-section {
+        flex-direction: column; /* Spalten sind nun untereinander */
+        gap: 0;
+        height: auto;
+    }
+
+    .panelCon {
+        width: 100%; 
+        animation: none; 
+    }
+
+    .panel img {
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 30px; 
+    }
+}
