@@ -1,107 +1,107 @@
 /* CSS Document Cursor */
-
 /* Farbdefinierung */
 :root {
     --pink: #ff5d8f;
   }
-  /* Curserveränderung */
+/*--------------------------------*/  
+/* Curserveränderung */
+.cursor {
+  width: 90px;
+  height: 90px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 50%;
+  border: 6px solid var(--pink);
+  top: 0;
+  left: 0;
+  cursor: none;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 998;
+  transition: width 0.3s ease, height 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor.view {
+  background-color: var(--pink);
+  mix-blend-mode: normal;
+  text-transform: uppercase;
+  width: 190px;
+  height: 190px;
+}
+
+.cursor.view::after {
+  text-transform: uppercase;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-family: "LaoMN";
+  font-size: 30px;
+  line-height: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor.viewone::after {
+  content: "Lorem 1";
+}
+
+.cursor.viewtwo::after {
+  content: "Lorem 2";
+}
+
+.cursor.viewthree::after {
+  content: "Lorem 3";
+}
+
+.cursor.viewfour::after {
+  content: "Lorem 4";
+  text-transform: initial;
+}
+
+.cursor.viewfive::after {
+  content: "Lorem 5";
+  text-transform: initial;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.cursor.link {
+  background-color: var(--pink);
+  width: 90px !important;
+  height: 90px !important;
+  mix-blend-mode: difference !important;
+}
+
+.cursor.link::after {
+  content: "" !important;
+}
+
+.cursor.mail {
+  background-color: var(--pink);
+  mix-blend-mode: initial;
+}
+
+.cursor.mail::after {
+  content: "contact" !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
   .cursor {
-    width: 90px;
-    height: 90px;
-    background-color: transparent;
-    position: absolute;
-    border-radius: 50%;
-    border: 6px solid var(--pink);
-    top: 0;
-    left: 0;
-    cursor: none;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    z-index: 998;
-    transition: width 0.3s ease, height 0.3s ease;
-    transform: translate(-50%, -50%);
+    display: none;
   }
-
-  .cursor.view {
-    background-color: var(--pink);
-    mix-blend-mode: normal;
-    text-transform: uppercase;
-    width: 190px;
-    height: 190px;
-  }
-
-  .cursor.view::after {
-    text-transform: uppercase;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    font-family: "LaoMN";
-    font-size: 30px;
-    line-height: 1;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .cursor.viewone::after {
-    content: "Lorem 1";
-  }
-
-  .cursor.viewtwo::after {
-    content: "Lorem 2";
-  }
-
-  .cursor.viewthree::after {
-    content: "Lorem 3";
-  }
-
-  .cursor.viewfour::after {
-    content: "Lorem 4";
-    text-transform: initial;
-  }
-
-  .cursor.viewfive::after {
-    content: "Lorem 5";
-    text-transform: initial;
-    font-size: 22px;
-    line-height: 1.5;
-  }
-
-  .cursor.link {
-    background-color: var(--pink);
-    width: 90px !important;
-    height: 90px !important;
-    mix-blend-mode: difference !important;
-  }
-
-  .cursor.link::after {
-    content: "" !important;
-  }
-
-  .cursor.mail {
-    background-color: var(--pink);
-    mix-blend-mode: initial;
-  }
-
-  .cursor.mail::after {
-    content: "contact" !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 22px;
-    text-align: center;
-    line-height: 1;
-  }
-
-  @media (max-width: 767px) {
-    .cursor {
-      display: none;
-    }
-  }
+}
