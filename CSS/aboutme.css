@@ -56,7 +56,7 @@ and (max-width : 480px) {
     font-family: 'LaoMN';
     margin-top: 5%;
   }
-  
+}  
   /* Header Stuff mit Slideranimation und nav */
   header {
     padding: 20px 0;
